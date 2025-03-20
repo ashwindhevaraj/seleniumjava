@@ -39,7 +39,8 @@ class HomepageTest extends Baseclass {
 		System.out.println(rb.getString("username"));
 		driver.get("https://demoqa.com/");
 		System.out.println(driver.getTitle());		
-		hmpage.alerthandling();
+		//hmpage.alerthandling();
+		hmpage.switchingframes();
 		System.out.println(driver.getCurrentUrl());
 		Assert.assertEquals(true, true);
 	}
