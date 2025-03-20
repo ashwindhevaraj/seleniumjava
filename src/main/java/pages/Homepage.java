@@ -24,7 +24,9 @@ public class Homepage {
     private By timeralert = By.id("timerAlertButton");
     private By confirmbutton= By.id("confirmButton");
     private By promptbutton = By.id("promtButton");
-    //This method will handle all types of alert and as part of learning this is the first topic
+    private By frameleftmenu = By.xpath("(//span[contains(text(),'Frames')])[1]");
+    private By biggerframelocator = By.id("sampleHeading");
+    		//This method will handle all types of alert and as part of learning this is the first topic
     public void alerthandling(){
     	WebElement alerticon1=driver1.findElement(alerticon);
     	waits.until(d ->alerticon1.isDisplayed());
@@ -56,7 +58,21 @@ public class Homepage {
     	alert.sendKeys("HI i am automation text");
     	alert.accept();
     }
-    public void alertclick() {
-    	
+    public void switchingframes() {
+    	WebElement alerticon1=driver1.findElement(alerticon);
+    	waits.until(d ->alerticon1.isDisplayed());
+    	alerticon1.click();
+    	WebElement frameleftmenu1=driver1.findElement(frameleftmenu);
+    	waits.until(d ->frameleftmenu1.isDisplayed());
+    	frameleftmenu1.click();
+    	driver1.switchTo().frame("frame1");
+    	WebElement bigframe1=driver1.findElement(biggerframelocator);
+    	System.out.println(bigframe1.getText());
+    	// we need to switch to default before switching to another frame
+    	driver1.switchTo().defaultContent();
+    	driver1.switchTo().frame("frame2");
+    	WebElement bigframe2=driver1.findElement(biggerframelocator);
+    	System.out.println(bigframe2.getText());
+    	driver1.switchTo().defaultContent();
     }
 }
