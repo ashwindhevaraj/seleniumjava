@@ -26,6 +26,7 @@ class Baseclass {
 	public void chromeSetup() {
 		WebDriverManager.chromedriver().setup();
 		driver=new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 	public void edgeSetup() {
 		WebDriverManager.edgedriver().setup();
@@ -35,5 +36,8 @@ class Baseclass {
 		if(driver!=null) {
 			driver.quit();
 		}
-	}	
+	}
+	public void openurl(String url) {
+		driver.get(url);
+	}
 }
