@@ -37,7 +37,7 @@ class HomepageTest extends Baseclass {
 		//this line extracts data from resource bundle available in src/main/resources/config.properties
 		ResourceBundle rb=ResourceBundle.getBundle("config");
 		System.out.println(rb.getString("username"));
-		driver.get("https://demoqa.com/");
+		openurl("https://demoqa.com/");
 		System.out.println(driver.getTitle());		
 		//hmpage.alerthandling();
 		hmpage.switchingframes();
