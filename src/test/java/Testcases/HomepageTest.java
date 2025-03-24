@@ -18,8 +18,8 @@ class HomepageTest extends Baseclass {
 	private Homepage hmpage;
 	@BeforeClass
 	public void setupTest() {
-		chromeSetup();
-		hmpage=new Homepage(driver);
+		browserSetup("chrome");
+		hmpage=new Homepage(driver,waits);
 	}
 	@AfterClass
 	public void rampdown() {
