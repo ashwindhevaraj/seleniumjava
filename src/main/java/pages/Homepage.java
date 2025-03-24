@@ -13,10 +13,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Homepage {
 	private WebDriver driver1;
 	public Wait<WebDriver> waits;
-	public Homepage(WebDriver driver){
+	public Homepage(WebDriver driver,WebDriverWait wait){
 	    driver1=driver;
-		waits=new WebDriverWait(driver1,Duration.ofSeconds(10));
-		driver1.manage().window().maximize();
+		this.waits=wait;
 	}
     private By alerticon= By.xpath("//h5[contains(text(),'Alerts, Frame & Windows')]");
     private By alertleftmenu= By.xpath("//span[text()='Alerts']");

@@ -23,14 +23,20 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.Homepage;
 class Baseclass {
 	protected WebDriver driver;
-	public void chromeSetup() {
-		WebDriverManager.chromedriver().setup();
-		driver=new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-	}
-	public void edgeSetup() {
-		WebDriverManager.edgedriver().setup();
-		driver=new EdgeDriver();
+	protected WebDriverWait waits;
+	public void browserSetup(String browser) {
+		if(browser.equalsIgnoreCase("chrome")) {
+			WebDriverManager.chromedriver().setup();
+			driver=new ChromeDriver();
+		}
+		else if(browser.equalsIgnoreCase("edge")) {
+			WebDriverManager.edgedriver().setup();
+			driver=new EdgeDriver();
+		}
+		//below line used for implicitly wait
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		waits=new WebDriverWait(driver,Duration.ofSeconds(10));
+		driver.manage().window().maximize();
 	}
 	public void teardown() {
 		if(driver!=null) {
