@@ -37,11 +37,11 @@ class HomepageTest extends Baseclass {
 		//this line extracts data from resource bundle available in src/main/resources/config.properties
 		ResourceBundle rb=ResourceBundle.getBundle("config");
 		System.out.println(rb.getString("username"));
-		openurl("https://demoqa.com/");
-		System.out.println(driver.getTitle());		
+		openurl("https://demoqa.com/");		
 		//hmpage.alerthandling();
-		hmpage.switchingframes();
-		System.out.println(driver.getCurrentUrl());
+		//hmpage.switchingframes();
+		//browserCommands();
+		navigationCommands();
 		Assert.assertEquals(true, true);
 	}
 
