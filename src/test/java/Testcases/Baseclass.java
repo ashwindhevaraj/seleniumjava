@@ -36,7 +36,7 @@ class Baseclass {
 		}
 		//below line used for implicitly wait
 		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		waits=new WebDriverWait(driver,Duration.ofSeconds(10));
+		waits=new WebDriverWait(driver,Duration.ofSeconds(15));
 		driver.manage().window().maximize();
 	}
 	public void teardown() {

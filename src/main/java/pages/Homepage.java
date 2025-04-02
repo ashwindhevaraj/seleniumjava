@@ -9,10 +9,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import locators.Elements;
 
 public class Homepage {
 	private WebDriver driver1;
 	public Wait<WebDriver> waits;
+	public Elements ele=new Elements();
 	public Homepage(WebDriver driver,WebDriverWait wait){
 	    driver1=driver;
 		this.waits=wait;
@@ -73,5 +75,26 @@ public class Homepage {
     	WebElement bigframe2=driver1.findElement(biggerframelocator);
     	System.out.println(bigframe2.getText());
     	driver1.switchTo().defaultContent();
+    }
+    public void radiobuttonhandling() {
+    	WebElement elemenu=driver1.findElement(ele.elementmenu);
+    	waits.until(d ->elemenu.isDisplayed());
+    	elemenu.click();
+    	WebElement radiomenu=driver1.findElement(ele.radiobuttonmenu);
+    	waits.until(d ->radiomenu.isDisplayed());
+    	radiomenu.click();
+    	WebElement yesopt=driver1.findElement(ele.yesoption_rdo);
+    	//waits.until(d ->yesopt.isDisplayed());
+    	//below is the check for radio button is selected or not
+    	System.out.println(yesopt.isSelected());
+    	yesopt.click();
+    	System.out.println(yesopt.isSelected());
+    	WebElement impressopt=driver1.findElement(ele.impressive_rdo);
+    	waits.until(d ->impressopt.isDisplayed());
+    	impressopt.click();
+    	WebElement noopt=driver1.findElement(ele.no_rdo);
+    	waits.until(d ->noopt.isDisplayed());
+    	//below is the check for radio button is enabled or disabled
+    	System.out.println(noopt.isEnabled());
     }
 }
