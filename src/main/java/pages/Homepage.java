@@ -76,10 +76,13 @@ public class Homepage {
     	System.out.println(bigframe2.getText());
     	driver1.switchTo().defaultContent();
     }
-    public void radiobuttonhandling() {
+    public void elementmenuclick() {
     	WebElement elemenu=driver1.findElement(ele.elementmenu);
     	waits.until(d ->elemenu.isDisplayed());
     	elemenu.click();
+    }
+    public void radiobuttonhandling() {
+    	elementmenuclick();
     	WebElement radiomenu=driver1.findElement(ele.radiobuttonmenu);
     	waits.until(d ->radiomenu.isDisplayed());
     	radiomenu.click();
@@ -96,5 +99,20 @@ public class Homepage {
     	waits.until(d ->noopt.isDisplayed());
     	//below is the check for radio button is enabled or disabled
     	System.out.println(noopt.isEnabled());
+    }
+    public void checkboxhandling() {
+    	elementmenuclick();
+    	WebElement checkmenu=driver1.findElement(ele.checkboxmenu);
+    	waits.until(d ->checkmenu.isDisplayed());
+    	checkmenu.click();
+    	WebElement hometoggle1=driver1.findElement(ele.hometoggle);
+    	waits.until(d ->hometoggle1.isDisplayed());
+    	hometoggle1.click();
+    	WebElement downloadtoggle1=driver1.findElement(ele.downloadcheckbox);
+    	waits.until(d ->downloadtoggle1.isDisplayed());
+    	downloadtoggle1.click();
+    	WebElement excelfiletext1=driver1.findElement(ele.excelfiletext);
+    	waits.until(d ->excelfiletext1.isDisplayed());
+    	excelfiletext1.click();
     }
 }
