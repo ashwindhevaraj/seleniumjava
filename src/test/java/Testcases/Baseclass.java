@@ -1,6 +1,8 @@
 package Testcases;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.Wait;
@@ -59,6 +61,8 @@ class Baseclass {
 		driver.navigate().back();
 		driver.navigate().refresh();
 		driver.navigate().forward();
+	}
+	public void scrollview(WebElement element) {
 	}
 	public void openurl(String url) {
 		driver.get(url);

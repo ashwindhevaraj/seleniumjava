@@ -4,17 +4,18 @@ import java.time.Duration;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import locators.Elements;
+import locators.Widgets;
 
 public class Homepage {
 	private WebDriver driver1;
 	public Wait<WebDriver> waits;
-	public Elements ele=new Elements();
 	public Homepage(WebDriver driver,WebDriverWait wait){
 	    driver1=driver;
 		this.waits=wait;
@@ -77,42 +78,58 @@ public class Homepage {
     	driver1.switchTo().defaultContent();
     }
     public void elementmenuclick() {
-    	WebElement elemenu=driver1.findElement(ele.elementmenu);
+    	WebElement elemenu=driver1.findElement(Elements.elementmenu);
     	waits.until(d ->elemenu.isDisplayed());
     	elemenu.click();
     }
     public void radiobuttonhandling() {
     	elementmenuclick();
-    	WebElement radiomenu=driver1.findElement(ele.radiobuttonmenu);
+    	WebElement radiomenu=driver1.findElement(Elements.radiobuttonmenu);
     	waits.until(d ->radiomenu.isDisplayed());
     	radiomenu.click();
-    	WebElement yesopt=driver1.findElement(ele.yesoption_rdo);
+    	WebElement yesopt=driver1.findElement(Elements.yesoption_rdo);
     	//waits.until(d ->yesopt.isDisplayed());
     	//below is the check for radio button is selected or not
     	System.out.println(yesopt.isSelected());
     	yesopt.click();
     	System.out.println(yesopt.isSelected());
-    	WebElement impressopt=driver1.findElement(ele.impressive_rdo);
+    	WebElement impressopt=driver1.findElement(Elements.impressive_rdo);
     	waits.until(d ->impressopt.isDisplayed());
     	impressopt.click();
-    	WebElement noopt=driver1.findElement(ele.no_rdo);
+    	WebElement noopt=driver1.findElement(Elements.no_rdo);
     	waits.until(d ->noopt.isDisplayed());
     	//below is the check for radio button is enabled or disabled
     	System.out.println(noopt.isEnabled());
     }
     public void checkboxhandling() {
     	elementmenuclick();
-    	WebElement checkmenu=driver1.findElement(ele.checkboxmenu);
+    	WebElement checkmenu=driver1.findElement(Elements.checkboxmenu);
     	waits.until(d ->checkmenu.isDisplayed());
     	checkmenu.click();
-    	WebElement hometoggle1=driver1.findElement(ele.hometoggle);
+    	WebElement hometoggle1=driver1.findElement(Elements.hometoggle);
     	waits.until(d ->hometoggle1.isDisplayed());
     	hometoggle1.click();
-    	WebElement downloadtoggle1=driver1.findElement(ele.downloadcheckbox);
+    	WebElement downloadtoggle1=driver1.findElement(Elements.downloadcheckbox);
     	waits.until(d ->downloadtoggle1.isDisplayed());
     	downloadtoggle1.click();
-    	WebElement excelfiletext1=driver1.findElement(ele.excelfiletext);
+    	WebElement excelfiletext1=driver1.findElement(Elements.excelfiletext);
     	waits.until(d ->excelfiletext1.isDisplayed());
     	excelfiletext1.click();
+    }
+    public void selecthandling() {
+    	elementmenuclick();
+    	WebElement widgetmenu1=driver1.findElement(Widgets.widgetmenu);
+    	((JavascriptExecutor)driver1).executeScript("arguments[0].scrollIntoView();", widgetmenu1);
+    	waits.until(d ->widgetmenu1.isDisplayed());
+    	widgetmenu1.click();
+    	WebElement selectmenu1=driver1.findElement(Widgets.selectmenu);
+    	waits.until(d ->selectmenu1.isDisplayed());
+    	selectmenu1.click();
+    	WebElement selectdropdown1=driver1.findElement(Widgets.select_by_options);
+    	waits.until(d ->selectdropdown1.isDisplayed());
+    	selectdropdown1.click();
+    	WebElement selectexact=driver1.findElement(Widgets.selectdropdown("Group 1, option 1"));
+    	waits.until(d ->selectexact.isDisplayed());
+    	selectexact.click();
     }
 }

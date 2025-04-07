@@ -43,7 +43,8 @@ class HomepageTest extends Baseclass {
 		//browserCommands();
 		//navigationCommands();
 		//hmpage.radiobuttonhandling();
-		hmpage.checkboxhandling();
+		//hmpage.checkboxhandling();
+		hmpage.selecthandling();
 		Assert.assertEquals(true, true);
 	}
 
