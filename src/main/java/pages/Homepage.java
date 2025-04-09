@@ -8,6 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import locators.Elements;
@@ -131,5 +132,10 @@ public class Homepage {
     	WebElement selectexact=driver1.findElement(Widgets.selectdropdown("Group 1, option 1"));
     	waits.until(d ->selectexact.isDisplayed());
     	selectexact.click();
+    }
+    public void oldselecthandling() {
+    	WebElement oldselect1 = driver1.findElement(Widgets.oldselectdpdown);
+    	Select s = new Select(oldselect1);
+    	s.selectByVisibleText("Black");
     }
 }

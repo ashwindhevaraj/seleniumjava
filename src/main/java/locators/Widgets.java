@@ -10,4 +10,5 @@ public class Widgets{
 	public static By selectdropdown(String text) {
 		return By.xpath("//*[contains(text(),'"+text+"')]");
 	}
+	public static final By oldselectdpdown = By.id("oldSelectMenu");
 	}
