@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -137,5 +138,21 @@ public class Homepage {
     	WebElement oldselect1 = driver1.findElement(Widgets.oldselectdpdown);
     	Select s = new Select(oldselect1);
     	s.selectByVisibleText("Black");
+    }
+    public void multiselecthandling() {
+    	WebElement multi1 = driver1.findElement(Widgets.multiselectdiv);
+    	((JavascriptExecutor)driver1).executeScript("arguments[0].scrollIntoView();", multi1);
+    	waits.until(d ->multi1.isDisplayed());
+    	multi1.click();
+    	String s="Green,Blue,Black,Red";
+    	String s1[]=s.split(",");
+    	for(String v:s1) {
+    		WebElement selectexact=driver1.findElement(Widgets.selectdropdowntry(v));
+        	waits.until(d ->selectexact.isDisplayed());
+        	selectexact.click();
+    	}
+    		//multi1.sendKeys(v);
+    		//multi1.sendKeys(Keys.ENTER);
+    	//}
     }
 }
