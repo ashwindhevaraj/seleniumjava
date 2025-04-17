@@ -11,4 +11,8 @@ public class Widgets{
 		return By.xpath("//*[contains(text(),'"+text+"')]");
 	}
 	public static final By oldselectdpdown = By.id("oldSelectMenu");
+	public static final By multiselectdiv = By.xpath("//div[contains(text(),'Select...')]");
+	public static By selectdropdowntry(String text) {
+		return By.xpath("//div[contains(text(),'"+text+"')]");
+	}
 	}

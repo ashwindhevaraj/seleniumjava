@@ -46,6 +46,7 @@ class HomepageTest extends Baseclass {
 		//hmpage.checkboxhandling();
 		hmpage.selecthandling();
 		hmpage.oldselecthandling();
+		hmpage.multiselecthandling();
 		Assert.assertEquals(true, true);
 	}
 
