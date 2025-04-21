@@ -155,4 +155,13 @@ public class Homepage {
     		//multi1.sendKeys(Keys.ENTER);
     	//}
     }
+    public void linktexthandling(String text) {
+    	elementmenuclick();
+    	WebElement linktextmenu = driver1.findElement(Elements.linkmenu);
+    	waits.until(d ->linktextmenu.isDisplayed());
+    	linktextmenu.click();
+    	WebElement linktext1 = driver1.findElement(Elements.linktextreturn(text));
+    	waits.until(d ->linktext1.isDisplayed());
+    	linktext1.click();
+    }
 }

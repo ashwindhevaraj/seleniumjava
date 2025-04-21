@@ -44,9 +44,10 @@ class HomepageTest extends Baseclass {
 		//navigationCommands();
 		//hmpage.radiobuttonhandling();
 		//hmpage.checkboxhandling();
-		hmpage.selecthandling();
-		hmpage.oldselecthandling();
-		hmpage.multiselecthandling();
+		//hmpage.selecthandling();
+		//hmpage.oldselecthandling();
+		//hmpage.multiselecthandling();
+		hmpage.linktexthandling("Click Here for Valid Link");
 		Assert.assertEquals(true, true);
 	}
 

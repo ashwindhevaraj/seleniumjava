@@ -13,4 +13,8 @@ public class Elements{
 	public static final By hometoggle = By.xpath("//button[@aria-label='Toggle']");
 	public static final By downloadcheckbox = By.xpath("//label[@for='tree-node-downloads']//preceding-sibling::button");
 	public static final By excelfiletext = By.xpath("//span[contains(text(),'Excel File.doc')]");
+	public static final By linkmenu = By.xpath("//span[contains(text(),'Broken Links - Images')]");
+	public static By linktextreturn(String text) {
+		return By.linkText(text);
+	}
 	}
