@@ -1,10 +1,12 @@
-package Testcases;
+package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -23,8 +25,7 @@ import org.testng.asserts.*;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import pages.Homepage;
-class Baseclass {
+public class Baseclass {
 	protected WebDriver driver;
 	protected WebDriverWait waits;
 	public void browserSetup(String browser) {
@@ -66,5 +67,18 @@ class Baseclass {
 	}
 	public void openurl(String url) {
 		driver.get(url);
+	}
+	public void actionclass(WebDriver driver,WebElement element,String acts) {
+		Actions act = new Actions(driver);
+		Action act2;
+		if(acts.equals("movetoelement")) {
+			act2=act.moveToElement(element).build();
+			act2.perform();
+		}
+		else if(acts.equals("click")) {
+			act2=act.click(element).build();
+			act2.perform();
+		}
+		
 	}
 }

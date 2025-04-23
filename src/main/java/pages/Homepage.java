@@ -15,7 +15,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import locators.Elements;
 import locators.Widgets;
 import locators.Alertsclass;
-public class Homepage {
+import pages.Baseclass;
+public class Homepage extends Baseclass{
 	private WebDriver driver1;
 	public Wait<WebDriver> waits;
 	public Homepage(WebDriver driver,WebDriverWait wait){
@@ -76,6 +77,12 @@ public class Homepage {
     	waits.until(d ->elemenu.isDisplayed());
     	elemenu.click();
     }
+    public void widgetmenuclick() {
+    	WebElement widgetmenu1=driver1.findElement(Widgets.widgetmainmenu);
+    	//((JavascriptExecutor)driver1).executeScript("arguments[0].scrollIntoView();", widgetmenu1);
+    	waits.until(d ->widgetmenu1.isDisplayed());
+    	widgetmenu1.click();
+    }
     public void radiobuttonhandling() {
     	elementmenuclick();
     	WebElement radiomenu=driver1.findElement(Elements.radiobuttonmenu);
@@ -111,12 +118,9 @@ public class Homepage {
     	excelfiletext1.click();
     }
     public void selecthandling() {
-    	elementmenuclick();
-    	WebElement widgetmenu1=driver1.findElement(Widgets.widgetmenu);
-    	((JavascriptExecutor)driver1).executeScript("arguments[0].scrollIntoView();", widgetmenu1);
-    	waits.until(d ->widgetmenu1.isDisplayed());
-    	widgetmenu1.click();
+    	widgetmenuclick();
     	WebElement selectmenu1=driver1.findElement(Widgets.selectmenu);
+    	((JavascriptExecutor)driver1).executeScript("arguments[0].scrollIntoView();", selectmenu1);
     	waits.until(d ->selectmenu1.isDisplayed());
     	selectmenu1.click();
     	WebElement selectdropdown1=driver1.findElement(Widgets.select_by_options);
@@ -155,5 +159,18 @@ public class Homepage {
     	WebElement linktext1 = driver1.findElement(Elements.linktextreturn(text));
     	waits.until(d ->linktext1.isDisplayed());
     	linktext1.click();
+    }
+    public void mouseactions() {
+    	widgetmenuclick();
+    	WebElement tooltipmenu1=driver1.findElement(Widgets.tooltipsubmenu);
+    	((JavascriptExecutor)driver1).executeScript("arguments[0].scrollIntoView();", tooltipmenu1);
+    	waits.until(d ->tooltipmenu1.isDisplayed());
+    	tooltipmenu1.click();
+    	WebElement hoverbutton1=driver1.findElement(Widgets.hoverbutton);
+    	waits.until(d ->hoverbutton1.isDisplayed());
+    	actionclass(driver1,hoverbutton1,"click");
+    	WebElement hovertext1=driver1.findElement(Widgets.hovertextfield);
+    	waits.until(d ->hovertext1.isDisplayed());
+    	actionclass(driver1,hovertext1,"movetoelement");
     }
 }
