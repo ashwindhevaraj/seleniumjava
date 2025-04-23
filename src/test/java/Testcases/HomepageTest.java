@@ -4,6 +4,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import pages.Baseclass;
 import pages.Homepage;
 
 import static org.testng.AssertJUnit.assertEquals;
@@ -47,7 +48,8 @@ class HomepageTest extends Baseclass {
 		//hmpage.selecthandling();
 		//hmpage.oldselecthandling();
 		//hmpage.multiselecthandling();
-		hmpage.linktexthandling("Click Here for Valid Link");
+		//hmpage.linktexthandling("Click Here for Valid Link");
+		hmpage.mouseactions();
 		Assert.assertEquals(true, true);
 	}
 

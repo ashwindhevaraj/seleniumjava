@@ -3,6 +3,7 @@ package locators;
 import org.openqa.selenium.By;
 
 public class Widgets{
+	public static final By widgetmainmenu = By.xpath("//h5[contains(text(),'Widgets')]");
 	public static final By widgetmenu= By.xpath("//div[contains(text(),'Widgets')]");
 	public static final By selectmenu = By.xpath("//span[text()='Select Menu']");
 	//select menu elements
@@ -15,4 +16,8 @@ public class Widgets{
 	public static By selectdropdowntry(String text) {
 		return By.xpath("//div[contains(text(),'"+text+"')]");
 	}
+	public static final By tooltipsubmenu = By.xpath("//span[text()='Tool Tips']");
+	public static final By hoverbutton = By.xpath("//button[@id='toolTipButton']");
+	public static final By hovertextfield = By.xpath("//input[@id='toolTipTextField']");
+	
 	}
