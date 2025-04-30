@@ -169,8 +169,16 @@ public class Homepage extends Baseclass{
     	WebElement hoverbutton1=driver1.findElement(Widgets.hoverbutton);
     	waits.until(d ->hoverbutton1.isDisplayed());
     	actionclass(driver1,hoverbutton1,"click");
+    	WebElement tooltiptext2 = driver1.findElement(Widgets.tooltiptext1);
+    	waits.until(d ->tooltiptext2.isDisplayed());
+    	System.out.println(tooltiptext2.getText());
     	WebElement hovertext1=driver1.findElement(Widgets.hovertextfield);
     	waits.until(d ->hovertext1.isDisplayed());
     	actionclass(driver1,hovertext1,"movetoelement");
-    }
+    	try {
+    	Thread.sleep(5);}
+    	catch(Exception e) {
+    		System.out.println(e);
+    		}
+    	}
 }
