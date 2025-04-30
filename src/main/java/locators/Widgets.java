@@ -19,5 +19,7 @@ public class Widgets{
 	public static final By tooltipsubmenu = By.xpath("//span[text()='Tool Tips']");
 	public static final By hoverbutton = By.xpath("//button[@id='toolTipButton']");
 	public static final By hovertextfield = By.xpath("//input[@id='toolTipTextField']");
+	public static final By tooltiptext1 = By.xpath("//div[contains(text(),'You hovered over the Button')]");
+	
 	
 	}
