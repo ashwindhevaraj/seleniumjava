@@ -1,6 +1,7 @@
 package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -68,6 +69,13 @@ public class Baseclass {
 	public void openurl(String url) {
 		driver.get(url);
 	}
+	public int[] getxandylocation(WebElement element) {
+		Point coordinates = element.getLocation();
+		int a[]=new int[2];
+		a[0] = coordinates.getX();
+		a[1] = coordinates.getY();
+		return a;
+	}
 	public void actionclass(WebDriver driver,WebElement element,String acts) {
 		Actions act = new Actions(driver);
 		Action act2;
@@ -77,6 +85,12 @@ public class Baseclass {
 		}
 		else if(acts.equals("click")) {
 			act2=act.click(element).build();
+			act2.perform();
+		}
+		else if(acts.equals("movebyoffset")) {
+			int a[]=getxandylocation(element);
+			System.out.println(a[0]+" "+a[1]);
+			act2=(Action) act.moveByOffset(a[0]+95,a[1]).click().build();
 			act2.perform();
 		}
 		
