@@ -181,4 +181,41 @@ public class Homepage extends Baseclass{
     		System.out.println(e);
     		}
     	}
+    public void slideraction() {
+    	String a="90";
+    	widgetmenuclick();
+    	WebElement slidermenu1=driver1.findElement(Widgets.slidermenu);
+    	((JavascriptExecutor)driver1).executeScript("arguments[0].scrollIntoView();", slidermenu1);
+    	waits.until(d ->slidermenu1.isDisplayed());
+    	slidermenu1.click();
+    	WebElement slidertooltip1=driver1.findElement(Widgets.slidertooltip);
+    	waits.until(d ->slidertooltip1.isDisplayed());
+    	//slidertooltip1.sendKeys("value",a);
+    	/*int b[]=new int[2];
+    	b=getxandylocation(slidertooltip1);
+    	System.out.println(b[0]+" "+b[1]);
+    	try {
+    		Thread.sleep(5000);
+    	}
+    	catch(Exception e) {
+    		System.out.println("delay");
+    	}
+    	WebElement sliderfinalbox1=driver1.findElement(Widgets.sliderinputbox);
+    	waits.until(d ->sliderfinalbox1.isDisplayed());
+    	try {
+    		Thread.sleep(2000);
+    	}
+    	catch(Exception e) {
+    		System.out.println("delay");
+    	}
+    	System.out.println(sliderfinalbox1.getText());
+    	System.out.println(sliderfinalbox1.getCssValue("value"));*/
+    	actionclass(driver1,slidertooltip1,"movebyoffset");
+    	try {
+    		Thread.sleep(2000);
+    	}
+    	catch(Exception e) {
+    		System.out.println("delay");
+    	}
+    }
 }

@@ -49,7 +49,8 @@ class HomepageTest extends Baseclass {
 		//hmpage.oldselecthandling();
 		//hmpage.multiselecthandling();
 		//hmpage.linktexthandling("Click Here for Valid Link");
-		hmpage.mouseactions();
+		//hmpage.mouseactions();
+		hmpage.slideraction();
 		Assert.assertEquals(true, true);
 	}
 

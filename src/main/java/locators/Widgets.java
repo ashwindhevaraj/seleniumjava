@@ -20,6 +20,7 @@ public class Widgets{
 	public static final By hoverbutton = By.xpath("//button[@id='toolTipButton']");
 	public static final By hovertextfield = By.xpath("//input[@id='toolTipTextField']");
 	public static final By tooltiptext1 = By.xpath("//div[contains(text(),'You hovered over the Button')]");
-	
-	
+	public static final By slidermenu = By.xpath("//span[text()='Slider']");
+	public static final By slidertooltip = By.xpath("//input[@class='range-slider range-slider--primary']");
+	public static final By sliderinputbox = By.xpath("//input[@id='sliderValue']");
 	}
