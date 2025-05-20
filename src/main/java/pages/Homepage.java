@@ -182,40 +182,76 @@ public class Homepage extends Baseclass{
     		}
     	}
     public void slideraction() {
-    	String a="90";
     	widgetmenuclick();
     	WebElement slidermenu1=driver1.findElement(Widgets.slidermenu);
-    	((JavascriptExecutor)driver1).executeScript("arguments[0].scrollIntoView();", slidermenu1);
+    	scrollview(driver1,slidermenu1);
     	waits.until(d ->slidermenu1.isDisplayed());
     	slidermenu1.click();
     	WebElement slidertooltip1=driver1.findElement(Widgets.slidertooltip);
     	waits.until(d ->slidertooltip1.isDisplayed());
-    	//slidertooltip1.sendKeys("value",a);
-    	/*int b[]=new int[2];
-    	b=getxandylocation(slidertooltip1);
-    	System.out.println(b[0]+" "+b[1]);
-    	try {
-    		Thread.sleep(5000);
-    	}
-    	catch(Exception e) {
-    		System.out.println("delay");
-    	}
+    	actionclass(driver1,slidertooltip1,"movebyoffset");
     	WebElement sliderfinalbox1=driver1.findElement(Widgets.sliderinputbox);
     	waits.until(d ->sliderfinalbox1.isDisplayed());
-    	try {
-    		Thread.sleep(2000);
-    	}
-    	catch(Exception e) {
-    		System.out.println("delay");
-    	}
-    	System.out.println(sliderfinalbox1.getText());
-    	System.out.println(sliderfinalbox1.getCssValue("value"));*/
-    	actionclass(driver1,slidertooltip1,"movebyoffset");
-    	try {
-    		Thread.sleep(2000);
-    	}
-    	catch(Exception e) {
-    		System.out.println("delay");
-    	}
+    	System.out.println(sliderfinalbox1.getAttribute("value"));
+    }
+    public void progressbar() {
+    	widgetmenuclick();
+    	WebElement progressmenu1 = driver1.findElement(Widgets.progresssubmenu);
+    	scrollview(driver1,progressmenu1);
+    	waits.until(d ->progressmenu1.isDisplayed());
+    	progressmenu1.click();
+    	WebElement startstopbtn = driver1.findElement(Widgets.startstopbutton);
+    	waits.until(d ->startstopbtn.isDisplayed());
+    	startstopbtn.click();
+    	WebElement progressreader1 = driver1.findElement(Widgets.progressbarreading);
+    	waits.until(ExpectedConditions.textToBePresentInElement(progressreader1,"54"));
+    	startstopbtn.click();
+    }
+    public void datepicker(String month,String year,String day) {
+    	widgetmenuclick();
+    	WebElement datepickermenu1 = driver1.findElement(Widgets.datepickersubmenu);
+    	scrollview(driver1,datepickermenu1);
+    	waits.until(d ->datepickermenu1.isDisplayed());
+    	datepickermenu1.click();
+    	WebElement selectelement1 = driver1.findElement(Widgets.selectdateelement);
+    	waits.until(d ->selectelement1.isDisplayed());
+    	selectelement1.click();
+    	WebElement selectmonthdropdown1 = driver1.findElement(Widgets.selectmonthdropdown);
+    	selectdropdown(selectmonthdropdown1,month);
+    	WebElement selectyeardropdown1 = driver1.findElement(Widgets.selectyeardropdown);
+    	selectdropdown(selectyeardropdown1,year);
+    	WebElement dateselect1 = driver1.findElement(Widgets.exactdataselect(day));
+    	waits.until(d ->dateselect1.isDisplayed());
+    	dateselect1.click();
+    	System.out.println(selectelement1.getAttribute("value"));
+    }
+    public void datepicker2(String time,String day) {
+    	widgetmenuclick();
+    	WebElement datepickermenu1 = driver1.findElement(Widgets.datepickersubmenu);
+    	scrollview(driver1,datepickermenu1);
+    	waits.until(d ->datepickermenu1.isDisplayed());
+    	datepickermenu1.click();
+    	WebElement datetimeelement1 = driver1.findElement(Widgets.dataandtimeelement);
+    	waits.until(d ->datetimeelement1.isDisplayed());
+    	datetimeelement1.click();
+    	WebElement monthdropdown1 = driver1.findElement(Widgets.monthdropdown);
+    	monthdropdown1.click();
+    	WebElement monthselect1 = driver1.findElement(Widgets.monthselect);
+    	waits.until(d -> monthselect1.isDisplayed());
+    	monthselect1.click();
+    	WebElement yeardropdown1 = driver1.findElement(Widgets.yeardropdownlocal);
+    	waits.until(d ->yeardropdown1.isDisplayed());
+    	yeardropdown1.click();
+    	WebElement yearselect1 = driver1.findElement(Widgets.yearselect);
+    	waits.until(d ->yearselect1.isDisplayed());
+    	yearselect1.click();
+    	WebElement dateselect2 = driver1.findElement(Widgets.exactdataselect(day));
+    	waits.until(d ->dateselect2.isDisplayed());
+    	dateselect2.click();
+    	WebElement timeselect1 = driver1.findElement(Widgets.timeselect(time));
+    	scrollview(driver1,timeselect1);
+    	waits.until(d ->timeselect1.isDisplayed());
+    	timeselect1.click();
+    	System.out.println(datetimeelement1.getAttribute("value"));
     }
 }
