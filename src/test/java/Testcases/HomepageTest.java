@@ -50,7 +50,10 @@ class HomepageTest extends Baseclass {
 		//hmpage.multiselecthandling();
 		//hmpage.linktexthandling("Click Here for Valid Link");
 		//hmpage.mouseactions();
-		hmpage.slideraction();
+		//hmpage.slideraction();
+		//hmpage.progressbar();
+		hmpage.datepicker("June","2026","9");
+		//hmpage.datepicker2("02:30","17");
 		Assert.assertEquals(true, true);
 	}
 

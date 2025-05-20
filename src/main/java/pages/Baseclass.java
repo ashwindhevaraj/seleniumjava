@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -26,6 +27,7 @@ import org.testng.asserts.*;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import locators.Widgets;
 public class Baseclass {
 	protected WebDriver driver;
 	protected WebDriverWait waits;
@@ -64,7 +66,8 @@ public class Baseclass {
 		driver.navigate().refresh();
 		driver.navigate().forward();
 	}
-	public void scrollview(WebElement element) {
+	public void scrollview(WebDriver driver,WebElement element) {
+    	((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
 	}
 	public void openurl(String url) {
 		driver.get(url);
@@ -94,5 +97,9 @@ public class Baseclass {
 			act2.perform();
 		}
 		
+	}
+	public void selectdropdown(WebElement element,String text) {
+		Select s = new Select(element);
+    	s.selectByVisibleText(text);
 	}
 }
