@@ -1,6 +1,7 @@
 package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -94,6 +95,10 @@ public class Baseclass {
 			int a[]=getxandylocation(element);
 			System.out.println(a[0]+" "+a[1]);
 			act2=(Action) act.moveByOffset(a[0]+95,a[1]).click().build();
+			act2.perform();
+		}
+		else if(acts.equals("keydown")) {
+			act2=act.moveToElement(element).click().keyDown(Keys.SHIFT).sendKeys(acts).build();
 			act2.perform();
 		}
 		

@@ -254,4 +254,20 @@ public class Homepage extends Baseclass{
     	timeselect1.click();
     	System.out.println(datetimeelement1.getAttribute("value"));
     }
+    public void keyboardaction() {
+    	widgetmenuclick();
+    	WebElement autocompletemenu1 = driver1.findElement(Widgets.autocompletemenu);
+    	scrollview(driver1,autocompletemenu1);
+    	waits.until(d ->autocompletemenu1.isDisplayed());
+    	autocompletemenu1.click();
+    	WebElement autocompletetext1 = driver1.findElement(Widgets.autocompletetextbox);
+    	waits.until(d ->autocompletetext1.isDisplayed());
+    	actionclass(driver1,autocompletetext1,"keydown");
+    	try {
+    		Thread.sleep(5000);
+    	}
+    	catch(Exception e) {
+    		System.out.println("kkk");
+    	}
+    }
 }

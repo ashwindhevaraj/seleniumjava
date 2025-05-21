@@ -46,5 +46,7 @@ public class Widgets{
 	public static final By timeselect(String time) {
 		return By.xpath("//li[@class='react-datepicker__time-list-item ' and contains(text(),'"+time+"')]");
 	}
+	public static final By autocompletemenu = By.xpath("//span[contains(text(),'Auto Complete')]");
+	public static final By autocompletetextbox = By.xpath("//div[@id='autoCompleteMultipleContainer']");
 	
-	}
+			}
