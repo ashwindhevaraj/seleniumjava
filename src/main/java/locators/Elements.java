@@ -17,4 +17,6 @@ public class Elements{
 	public static By linktextreturn(String text) {
 		return By.linkText(text);
 	}
+	public static By fileuploadsubmenu = By.xpath("//span[contains(text(),'Upload and Download')]");
+	public static By uploadbutton = By.xpath("//input[@id='uploadFile']");
 	}

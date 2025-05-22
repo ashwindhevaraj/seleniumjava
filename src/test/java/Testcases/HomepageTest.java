@@ -54,7 +54,8 @@ class HomepageTest extends Baseclass {
 		//hmpage.progressbar();
 		//hmpage.datepicker("June","2026","9");
 		//hmpage.datepicker2("02:30","17");
-		hmpage.keyboardaction();
+		//hmpage.keyboardaction();
+		hmpage.fileupload();
 		Assert.assertEquals(true, true);
 	}
 
