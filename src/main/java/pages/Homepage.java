@@ -270,4 +270,20 @@ public class Homepage extends Baseclass{
     		System.out.println("kkk");
     	}
     }
+    public void fileupload() {
+    	elementmenuclick();
+    	WebElement fileuploadmenu1 = driver1.findElement(Elements.fileuploadsubmenu);
+    	scrollview(driver1,fileuploadmenu1);
+    	waits.until(d ->fileuploadmenu1.isDisplayed());
+    	fileuploadmenu1.click();
+    	WebElement fileuploadbtn1 = driver1.findElement(Elements.uploadbutton);
+    	waits.until(d ->fileuploadbtn1.isDisplayed());
+    	fileuploadbtn1.sendKeys("//Users//aswdevaraj//Downloads//sampleFile.jpeg");
+    	try {
+    		Thread.sleep(5000);
+    	}
+    	catch(Exception e) {
+    		System.out.println("kkk");
+    	}
+    }
 }
