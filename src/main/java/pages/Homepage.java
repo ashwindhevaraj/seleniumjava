@@ -83,6 +83,11 @@ public class Homepage extends Baseclass{
     	waits.until(d ->widgetmenu1.isDisplayed());
     	widgetmenu1.click();
     }
+    public void alertmenuclick() {
+    	WebElement alerticon1=driver1.findElement(Alertsclass.alerticon);
+    	waits.until(d ->alerticon1.isDisplayed());
+    	alerticon1.click();
+    }
     public void radiobuttonhandling() {
     	elementmenuclick();
     	WebElement radiomenu=driver1.findElement(Elements.radiobuttonmenu);
@@ -285,5 +290,22 @@ public class Homepage extends Baseclass{
     	catch(Exception e) {
     		System.out.println("kkk");
     	}
+    }
+    public void windowhandling() {
+    	alertmenuclick();
+    	WebElement browserwindow1 = driver1.findElement(Alertsclass.browserwindowsubmenu);
+    	waits.until(d ->browserwindow1.isDisplayed());
+    	browserwindow1.click();
+    	String parentwindow = getcurrentwindow(driver1);
+    	WebElement newtab1 = driver1.findElement(Alertsclass.newtabbutton);
+    	waits.until(d ->newtab1.isDisplayed());
+    	newtab1.click();
+    	//waits.until(d ->samplehead1.isDisplayed());
+    	//newtab1.click();
+    	//WebElement samplehead1 = driver1.findElement();
+    	windowhandlethings(parentwindow,driver1,Alertsclass.sampleheadingtext);
+    	WebElement newwindow1 = driver1.findElement(Alertsclass.newwindow);
+    	waits.until(d ->newwindow1.isDisplayed());
+    	newwindow1.click();
     }
 }
