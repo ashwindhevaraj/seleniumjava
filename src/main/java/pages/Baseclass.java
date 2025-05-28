@@ -21,7 +21,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.Iterator;
 import java.util.ResourceBundle;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.asserts.*;
@@ -106,5 +108,23 @@ public class Baseclass {
 	public void selectdropdown(WebElement element,String text) {
 		Select s = new Select(element);
     	s.selectByVisibleText(text);
+	}
+	public String getcurrentwindow(WebDriver driver) {
+		return driver.getWindowHandle();
+	}
+	public void windowhandlethings(String parent,WebDriver driver,By element) {
+		Set<String> s=driver.getWindowHandles();
+		Iterator<String> s1=s.iterator();
+		while(s1.hasNext()) {
+			String child = s1.next();
+			if(!child.equalsIgnoreCase(parent)) {
+				driver.switchTo().window(child);
+				WebElement element1=driver.findElement(element);
+				//waits.until(d ->element1.isDisplayed());
+				System.out.println(element1.getText());
+				driver.close();
+			}
+		}
+		driver.switchTo().window(parent);
 	}
 }
