@@ -15,5 +15,4 @@ public class Alertsclass {
     public static By newtabbutton = By.xpath("//button[@id='tabButton']");
     public static By sampleheadingtext = By.xpath("//h1[@id='sampleHeading']");
     public static By newwindow = By.xpath("//button[@id='windowButton']");
-    
 }

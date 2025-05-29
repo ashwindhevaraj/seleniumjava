@@ -1,6 +1,7 @@
 package pages;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -307,5 +308,19 @@ public class Homepage extends Baseclass{
     	WebElement newwindow1 = driver1.findElement(Alertsclass.newwindow);
     	waits.until(d ->newwindow1.isDisplayed());
     	newwindow1.click();
+    	windowhandlethings(parentwindow,driver1,Alertsclass.sampleheadingtext);
+    }
+    public void webtablehandling() {
+    	elementmenuclick();
+    	WebElement webtable1 = driver1.findElement(Elements.webtablesubmenu);
+    	waits.until(d ->webtable1.isDisplayed());
+    	webtable1.click();
+    	List<WebElement> datatable1 = driver1.findElements(Elements.alldatatable);
+    	for(WebElement x : datatable1) {
+    		if(!(x.getText().toString().contains(" "))) {
+    			System.out.println(x.getText().toString());
+    		}
+    	}
+    	
     }
 }
