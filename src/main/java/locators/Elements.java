@@ -19,4 +19,6 @@ public class Elements{
 	}
 	public static By fileuploadsubmenu = By.xpath("//span[contains(text(),'Upload and Download')]");
 	public static By uploadbutton = By.xpath("//input[@id='uploadFile']");
-	}
+	public static By webtablesubmenu = By.xpath("//span[text()='Web Tables']");
+	public static By alldatatable = By.xpath("//div[@class='rt-tbody']//div[@role='gridcell']");
+}
