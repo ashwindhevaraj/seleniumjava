@@ -21,4 +21,5 @@ public class Elements{
 	public static By uploadbutton = By.xpath("//input[@id='uploadFile']");
 	public static By webtablesubmenu = By.xpath("//span[text()='Web Tables']");
 	public static By alldatatable = By.xpath("//div[@class='rt-tbody']//div[@role='gridcell']");
+	public static By brokenlinkmenu = By.xpath("//span[text()='Broken Links - Images']");
 }

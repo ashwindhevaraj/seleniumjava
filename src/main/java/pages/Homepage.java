@@ -1,5 +1,6 @@
 package pages;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
@@ -322,5 +323,13 @@ public class Homepage extends Baseclass{
     		}
     	}
     	
+    }
+    public void brokenlinkcheck() throws IOException {
+    	elementmenuclick();
+    	WebElement brokenlink1 = driver1.findElement(Elements.brokenlinkmenu);
+    	scrollview(driver1,brokenlink1);
+    	waits.until(d ->brokenlink1.isDisplayed());
+    	brokenlink1.click();
+    	brokenlink(driver1);
     }
 }

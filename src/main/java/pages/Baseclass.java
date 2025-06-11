@@ -20,8 +20,12 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.time.Duration;
 import java.util.Iterator;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -126,5 +130,27 @@ public class Baseclass {
 			}
 		}
 		driver.switchTo().window(parent);
+	}
+	public void brokenlink(WebDriver driver) throws IOException {
+		List<WebElement> links = driver.findElements(By.tagName("a"));
+		//Iterator<WebElement> link2 = links.iterator();
+		for(int i=0;i<links.size();i++) {
+			WebElement e1=links.get(i);
+			String url=e1.getAttribute("href");
+			if(url!=null)
+			verifylink(url);
+		}
+	}
+	public void verifylink(String url) throws IOException {
+		URL link = new URL(url);
+		HttpURLConnection conn = (HttpURLConnection)link.openConnection();
+		conn.setConnectTimeout(3000);
+		conn.connect();
+		if(conn.getResponseCode()==200) {
+			System.out.println(url+" - "+conn.getResponseMessage());
+		}
+		else {
+			System.out.println(url+" - "+conn.getResponseMessage()+" is a broken link");
+		}
 	}
 }

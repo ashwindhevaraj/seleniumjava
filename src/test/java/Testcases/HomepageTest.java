@@ -9,6 +9,7 @@ import pages.Homepage;
 
 import static org.testng.AssertJUnit.assertEquals;
 
+import java.io.IOException;
 import java.util.ResourceBundle;
 
 import org.testng.Assert;
@@ -34,7 +35,7 @@ class HomepageTest extends Baseclass {
 			};
 	}
 	@Test()
-	public void test_login() {
+	public void test_login() throws IOException {
 		//this line extracts data from resource bundle available in src/main/resources/config.properties
 		ResourceBundle rb=ResourceBundle.getBundle("config");
 		System.out.println(rb.getString("username"));
@@ -57,7 +58,8 @@ class HomepageTest extends Baseclass {
 		//hmpage.keyboardaction();
 		//hmpage.fileupload();
 		//hmpage.windowhandling();
-		hmpage.webtablehandling();
+		//hmpage.webtablehandling();
+		hmpage.brokenlinkcheck();
 		Assert.assertEquals(true, true);
 	}
 
