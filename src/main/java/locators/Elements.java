@@ -22,4 +22,6 @@ public class Elements{
 	public static By webtablesubmenu = By.xpath("//span[text()='Web Tables']");
 	public static By alldatatable = By.xpath("//div[@class='rt-tbody']//div[@role='gridcell']");
 	public static By brokenlinkmenu = By.xpath("//span[text()='Broken Links - Images']");
+	public static By tablecolheader = By.xpath("//div[@class='rt-resizable-header-content']");
+	public static By tablerowheader = By.xpath("//div[@role='row']");
 }

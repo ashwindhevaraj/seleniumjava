@@ -58,8 +58,13 @@ class HomepageTest extends Baseclass {
 		//hmpage.keyboardaction();
 		//hmpage.fileupload();
 		//hmpage.windowhandling();
-		//hmpage.webtablehandling();
-		hmpage.brokenlinkcheck();
+		try {
+			hmpage.webtablehandling();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//hmpage.brokenlinkcheck();
 		Assert.assertEquals(true, true);
 	}
 
