@@ -1,6 +1,7 @@
 package pages;
 
 import java.io.IOException;
+import java.text.NumberFormat;
 import java.time.Duration;
 import java.util.List;
 
@@ -311,17 +312,33 @@ public class Homepage extends Baseclass{
     	newwindow1.click();
     	windowhandlethings(parentwindow,driver1,Alertsclass.sampleheadingtext);
     }
-    public void webtablehandling() {
+    public void webtablehandling()throws Exception {
+    	int r=0;
     	elementmenuclick();
     	WebElement webtable1 = driver1.findElement(Elements.webtablesubmenu);
     	waits.until(d ->webtable1.isDisplayed());
     	webtable1.click();
-    	List<WebElement> datatable1 = driver1.findElements(Elements.alldatatable);
+    	List<WebElement> colheader = driver1.findElements(Elements.tablecolheader);
+    	System.out.println("No of cols "+colheader.size());
+    	List<WebElement> rowheader = driver1.findElements(Elements.tablerowheader);
+    	System.out.println("No of rows "+rowheader.size());
+    	for(int i=2;i<=4;i++) {
+    		By tableexactdata = By.xpath("(//div[@role='row'])["+i+"]//div[5]");
+    		String max = driver1.findElement(tableexactdata).getText();
+    		NumberFormat f = NumberFormat.getNumberInstance();
+    		Number max1 = f.parse(max);
+    		int max2= max1.intValue();
+    		if(max2>r) {
+    			r=max2;
+    		}
+    	}
+    	System.out.println("max salary is "+r);
+    	/*List<WebElement> datatable1 = driver1.findElements(Elements.alldatatable);
     	for(WebElement x : datatable1) {
     		if(!(x.getText().toString().contains(" "))) {
     			System.out.println(x.getText().toString());
     		}
-    	}
+    	}*/
     	
     }
     public void brokenlinkcheck() throws IOException {
