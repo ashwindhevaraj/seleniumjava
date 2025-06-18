@@ -107,7 +107,10 @@ public class Baseclass {
 			act2=act.moveToElement(element).click().keyDown(Keys.SHIFT).sendKeys(acts).build();
 			act2.perform();
 		}
-		
+		else if(acts.equals("hover")) {
+			act2=(Action) act.clickAndHold().moveToElement(element).build();
+			act2.perform();
+		}
 	}
 	public void selectdropdown(WebElement element,String text) {
 		Select s = new Select(element);
