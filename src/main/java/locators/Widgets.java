@@ -48,5 +48,6 @@ public class Widgets{
 	}
 	public static final By autocompletemenu = By.xpath("//span[contains(text(),'Auto Complete')]");
 	public static final By autocompletetextbox = By.xpath("//div[@id='autoCompleteMultipleContainer']");
+	public static final By tooltiptext = By.xpath("//*[contains(text(),'You hovered over the Button')]");
 	
 			}

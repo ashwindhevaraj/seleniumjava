@@ -349,4 +349,16 @@ public class Homepage extends Baseclass{
     	brokenlink1.click();
     	brokenlink(driver1);
     }
+    public void tooltipvalidations() {
+    	widgetmenuclick();
+    	WebElement tooltipmenu1=driver1.findElement(Widgets.tooltipsubmenu);
+    	((JavascriptExecutor)driver1).executeScript("arguments[0].scrollIntoView();", tooltipmenu1);
+    	waits.until(d ->tooltipmenu1.isDisplayed());
+    	tooltipmenu1.click();
+    	WebElement hoverbutton1=driver1.findElement(Widgets.hoverbutton);
+    	waits.until(d ->hoverbutton1.isDisplayed());
+    	actionclass(driver1,hoverbutton1,"hover");
+    	WebElement tooltiptext1=driver1.findElement(Widgets.tooltiptext);
+    	System.out.println(tooltiptext1.getText().toString());
+    }
 }
