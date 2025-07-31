@@ -1,4 +1,7 @@
 package pages;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -38,13 +41,17 @@ import locators.Widgets;
 public class Baseclass {
 	protected WebDriver driver;
 	protected WebDriverWait waits;
+	public static Logger log;
 	public void browserSetup(String browser) {
+		log = LogManager.getLogger(Baseclass.class);
 		if(browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
+			log.info("chromedriver setup completed- it will open up");
 			driver=new ChromeDriver();
 		}
 		else if(browser.equalsIgnoreCase("edge")) {
 			WebDriverManager.edgedriver().setup();
+			//log.info("edgedriver setup completed- it will open up");
 			driver=new EdgeDriver();
 		}
 		//below line used for implicitly wait
@@ -54,6 +61,7 @@ public class Baseclass {
 	}
 	public void teardown() {
 		if(driver!=null) {
+			log.info("Closing this method as final step here");
 			driver.quit();
 		}
 	}
