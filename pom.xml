@@ -72,7 +72,7 @@
 		</dependency>-->
 		<!-- End: JUnit -->
 		<!-- Start: Logging -->
-		<dependency>
+		<!--<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
 			<version>2.14.0</version>
@@ -86,7 +86,7 @@
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-slf4j-impl</artifactId>
 			<version>2.14.0</version>
-		</dependency>
+		</dependency> -->
 		<!-- End: Logging -->
 		<!-- Start: Lombok -->
 		<dependency>
@@ -122,19 +122,35 @@
     		<version>7.10.2</version>
     		<scope>test</scope>
 		</dependency>
-		<dependency>
+		<!--<dependency>
     		<groupId>org.testng</groupId>
     		<artifactId>testng</artifactId>
     		<version>7.10.2</version>
     		<scope>main</scope>
-		</dependency>
+		</dependency>-->
 		<!-- https://mvnrepository.com/artifact/com.beust/jcommander -->
         <dependency>
         <groupId>com.beust</groupId>
         <artifactId>jcommander</artifactId>
         <version>1.82</version>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+    		<groupId>org.apache.logging.log4j</groupId>
+    		<artifactId>log4j-api</artifactId>
+    		<version>2.3.2</version>
+  		</dependency>
+  		<dependency>
+    		<groupId>org.apache.logging.log4j</groupId>
+    		<artifactId>log4j-core</artifactId>
+    		<version>2.3.2</version>
+  		</dependency>
+  		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+		<dependency>
+    		<groupId>io.qameta.allure</groupId>
+    		<artifactId>allure-testng</artifactId>
+    		<version>2.29.1</version>
+		</dependency>
 	</dependencies>
 
 	

@@ -4,6 +4,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.sun.tools.sjavac.Log;
+
 import pages.Baseclass;
 import pages.Homepage;
 
@@ -12,6 +14,8 @@ import static org.testng.AssertJUnit.assertEquals;
 import java.io.IOException;
 import java.util.ResourceBundle;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -39,7 +43,7 @@ class HomepageTest extends Baseclass {
 		//this line extracts data from resource bundle available in src/main/resources/config.properties
 		ResourceBundle rb=ResourceBundle.getBundle("config");
 		System.out.println(rb.getString("username"));
-		openurl("https://demoqa.com/");		
+		openurl("https://demoqa.com/");
 		//hmpage.alerthandling();
 		//hmpage.switchingframes();
 		//browserCommands();
