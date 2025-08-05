@@ -11,6 +11,8 @@ import pages.Homepage;
 
 import static org.testng.AssertJUnit.assertEquals;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ResourceBundle;
 
@@ -18,6 +20,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
 class HomepageTest extends Baseclass {
@@ -37,6 +42,25 @@ class HomepageTest extends Baseclass {
 			{"standard_user","secret_sauce"},
 			{"problem_user","secret_sauce"}
 			};
+	}
+	@DataProvider(name ="excelread1")
+	public Object[][] openexcel() throws IOException{
+		File f=new File("src/test/resources/testdata.xlsx");
+		FileInputStream file = new FileInputStream(f);
+		Workbook workbook = new XSSFWorkbook(file);
+		Sheet sheet = workbook.getSheetAt(0);
+		int rowcount = sheet.getPhysicalNumberOfRows();
+		int colcount = sheet.getRow(0).getPhysicalNumberOfCells();
+		Object data[][] = new Object[rowcount-1][colcount];
+		for(int i=1;i<rowcount;i++) {
+			Row row=sheet.getRow(i);
+			for(int j=0;j<colcount;j++) {
+				data[i-1][j]=row.getCell(j).toString();
+			}
+		}
+		workbook.close();
+		file.close();
+		return data;
 	}
 	@Test()
 	public void test_login() throws IOException {
@@ -71,6 +95,10 @@ class HomepageTest extends Baseclass {
 		//hmpage.brokenlinkcheck();
 		hmpage.tooltipvalidations();
 		Assert.assertEquals(true, true);
+	}
+	@Test(dataProvider="excelread1")
+	public void testlogin(String username,String password) {
+		System.out.println(username+"  "+password);
 	}
 
 }
