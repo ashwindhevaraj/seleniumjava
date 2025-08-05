@@ -4,6 +4,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="Testcases.HomepageTest"/>
+      <class name="Testcases.Testnglearn"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
