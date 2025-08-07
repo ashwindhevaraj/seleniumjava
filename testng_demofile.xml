@@ -6,4 +6,9 @@
       <class name="Testcases.Testnglearn"/>
     </classes>
   </test> <!-- Test -->
+  <test thread-count="5" name="TestNG running in safari">
+    <classes>
+      <class name="Testcases.Testnglearn"/>
+    </classes>
+  </test>
 </suite> <!-- Suite -->

@@ -1,49 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="4" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-06T07:44:52 IST" name="DemoTestNGSuite" finished-at="2025-08-06T07:44:53 IST" duration-ms="287">
+  <suite started-at="2025-08-07T07:16:40 IST" name="DemoTestNGSuite" finished-at="2025-08-07T07:16:40 IST" duration-ms="402">
     <groups>
     </groups>
-    <test started-at="2025-08-06T07:44:52 IST" name="TestNG Testing practices" finished-at="2025-08-06T07:44:53 IST" duration-ms="287">
+    <test started-at="2025-08-07T07:16:40 IST" name="TestNG Testing practices" finished-at="2025-08-07T07:16:40 IST" duration-ms="273">
       <class name="Testcases.Testnglearn">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:Testcases.Testnglearn@4f0100a7]" started-at="2025-08-06T07:44:52 IST" name="beforeSuite" finished-at="2025-08-06T07:44:52 IST" duration-ms="13" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Testcases.Testnglearn@4f0100a7]" started-at="2025-08-06T07:44:52 IST" name="beforeTest" finished-at="2025-08-06T07:44:52 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Testcases.Testnglearn@1c33c17b]" started-at="2025-08-07T07:16:40 IST" name="beforeTest" finished-at="2025-08-07T07:16:40 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Testcases.Testnglearn@4f0100a7]" started-at="2025-08-06T07:44:52 IST" name="beforeClass" finished-at="2025-08-06T07:44:52 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Testcases.Testnglearn@1c33c17b]" started-at="2025-08-07T07:16:40 IST" name="beforeClass" finished-at="2025-08-07T07:16:40 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Testcases.Testnglearn@4f0100a7]" started-at="2025-08-06T07:44:52 IST" name="beforeMethod" finished-at="2025-08-06T07:44:52 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Testcases.Testnglearn@1c33c17b]" started-at="2025-08-07T07:16:40 IST" name="beforeMethod" finished-at="2025-08-07T07:16:40 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="testcase1()[pri:0, instance:Testcases.Testnglearn@4f0100a7]" started-at="2025-08-06T07:44:52 IST" name="testcase1" finished-at="2025-08-06T07:44:53 IST" duration-ms="162" status="PASS">
+        <test-method signature="testcase1()[pri:0, instance:Testcases.Testnglearn@1c33c17b]" started-at="2025-08-07T07:16:40 IST" name="testcase1" finished-at="2025-08-07T07:16:40 IST" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testcase1 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Testcases.Testnglearn@4f0100a7]" started-at="2025-08-06T07:44:53 IST" name="afterMethod" finished-at="2025-08-06T07:44:53 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Testcases.Testnglearn@1c33c17b]" started-at="2025-08-07T07:16:40 IST" name="afterMethod" finished-at="2025-08-07T07:16:40 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:Testcases.Testnglearn@4f0100a7]" started-at="2025-08-06T07:44:53 IST" name="afterClass" finished-at="2025-08-06T07:44:53 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Testcases.Testnglearn@1c33c17b]" started-at="2025-08-07T07:16:40 IST" name="afterClass" finished-at="2025-08-07T07:16:40 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:Testcases.Testnglearn@4f0100a7]" started-at="2025-08-06T07:44:53 IST" name="afterTest" finished-at="2025-08-06T07:44:53 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:Testcases.Testnglearn@1c33c17b]" started-at="2025-08-07T07:16:40 IST" name="afterTest" finished-at="2025-08-07T07:16:40 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:Testcases.Testnglearn@4f0100a7]" started-at="2025-08-06T07:44:53 IST" name="afterSuite" finished-at="2025-08-06T07:44:53 IST" duration-ms="3" status="PASS">
+      </class> <!-- Testcases.Testnglearn -->
+    </test> <!-- TestNG Testing practices -->
+    <test started-at="2025-08-07T07:16:40 IST" name="TestNG running in safari" finished-at="2025-08-07T07:16:40 IST" duration-ms="25">
+      <class name="Testcases.Testnglearn">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:Testcases.Testnglearn@1b84f475]" started-at="2025-08-07T07:16:40 IST" name="beforeSuite" finished-at="2025-08-07T07:16:40 IST" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Testcases.Testnglearn@1b84f475]" started-at="2025-08-07T07:16:40 IST" name="beforeTest" finished-at="2025-08-07T07:16:40 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Testcases.Testnglearn@1b84f475]" started-at="2025-08-07T07:16:40 IST" name="beforeClass" finished-at="2025-08-07T07:16:40 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Testcases.Testnglearn@1b84f475]" started-at="2025-08-07T07:16:40 IST" name="beforeMethod" finished-at="2025-08-07T07:16:40 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testcase1()[pri:0, instance:Testcases.Testnglearn@1b84f475]" started-at="2025-08-07T07:16:40 IST" name="testcase1" finished-at="2025-08-07T07:16:40 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase1 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Testcases.Testnglearn@1b84f475]" started-at="2025-08-07T07:16:40 IST" name="afterMethod" finished-at="2025-08-07T07:16:40 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Testcases.Testnglearn@1b84f475]" started-at="2025-08-07T07:16:40 IST" name="afterClass" finished-at="2025-08-07T07:16:40 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:Testcases.Testnglearn@1b84f475]" started-at="2025-08-07T07:16:40 IST" name="afterTest" finished-at="2025-08-07T07:16:40 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:Testcases.Testnglearn@1b84f475]" started-at="2025-08-07T07:16:40 IST" name="afterSuite" finished-at="2025-08-07T07:16:40 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- Testcases.Testnglearn -->
-    </test> <!-- TestNG Testing practices -->
+    </test> <!-- TestNG running in safari -->
   </suite> <!-- DemoTestNGSuite -->
 </testng-results>
