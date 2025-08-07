@@ -1,4 +1,5 @@
 package Testcases;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -8,7 +9,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import pages.Testnglearnings;
 public class Testnglearn {
+	Testnglearnings m = new Testnglearnings("ash");
 @Test
 public void testcase1() {
 	System.out.println("checking testcase1");
@@ -46,6 +49,11 @@ public void beforeSuite() {
 public void afterSuite() {
    System.out.println("in afterSuite");
 }
+@Test(enabled=false)
+public void testcase2() {
+	Assert.assertEquals(m.message(), "ash");
+}
+
 
 }
 
