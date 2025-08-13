@@ -12,10 +12,6 @@ import org.testng.annotations.Test;
 import pages.Testnglearnings;
 public class Testnglearn {
 	Testnglearnings m = new Testnglearnings("ash");
-@Test
-public void testcase1() {
-	System.out.println("checking testcase1");
-}
 @BeforeMethod
 public void beforeMethod() {
    System.out.println("in beforeMethod");
@@ -49,11 +45,21 @@ public void beforeSuite() {
 public void afterSuite() {
    System.out.println("in afterSuite");
 }
-@Test(enabled=false)
-public void testcase2() {
+@Test(groups= {"firstgroup"})
+public void testcase1() {
+	System.out.println("checking testcase1");
 	Assert.assertEquals(m.message(), "ash");
 }
-
+@Test(enabled=false, groups= {"firstgroup","secondgroup"})
+public void testcase2() {
+	System.out.println("checking testcase2");
+	Assert.assertEquals(m.message(), "ash");
+}
+@Test(groups= {"secondgroup"})
+public void testcase3() {
+	System.out.println("checking testcase3");
+	Assert.assertEquals(m.message(), "ash");
+}
 
 }
 
