@@ -60,7 +60,14 @@ public void testcase3() {
 	System.out.println("checking testcase3");
 	Assert.assertEquals(m.message(), "ash");
 }
-
+@Test(expectedExceptions = ArithmeticException.class,groups= {"expectedexceptions"})
+public void testcase4() {
+	m.checkException();
+}
+@Test(groups= {"expectedexceptions"})
+public void testcase5() {
+	m.checkException();
+}
 }
 
 //in beforeSuite

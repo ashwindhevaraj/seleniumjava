@@ -8,4 +8,8 @@ public Testnglearnings(String k){
 public String message() {
 	return message;
 }
+public void checkException() {
+	System.out.println("this method will throw exception");
+	int c=1/0;
+}
 }

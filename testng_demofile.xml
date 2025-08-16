@@ -3,7 +3,7 @@
 <suite name="DemoTestNGSuite" parallel="instances" thread-count="2">
 	<groups>
 		<run>
-			<include name="secondgroup"/>
+			<include name="expectedexceptions"/>
 		</run>
 	</groups>
   <test thread-count="5" name="TestNG Testing practices">
