@@ -1,28 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="6" passed="2" failed="0" skipped="0">
+<testng-results ignored="6" total="10" passed="2" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-13T08:22:39 IST" name="DemoTestNGSuite" finished-at="2025-08-13T08:22:39 IST" duration-ms="366">
+  <suite started-at="2025-08-16T22:22:47 IST" name="DemoTestNGSuite" finished-at="2025-08-16T22:22:48 IST" duration-ms="417">
     <groups>
-      <group name="secondgroup">
-        <method signature="Testnglearn.testcase3()[pri:0, instance:Testcases.Testnglearn@632ceb35]" name="testcase3" class="Testcases.Testnglearn"/>
-        <method signature="Testnglearn.testcase3()[pri:0, instance:Testcases.Testnglearn@2b76ff4e]" name="testcase3" class="Testcases.Testnglearn"/>
-      </group> <!-- secondgroup -->
+      <group name="expectedexceptions">
+        <method signature="Testnglearn.testcase4()[pri:0, instance:Testcases.Testnglearn@1c93f6e1]" name="testcase4" class="Testcases.Testnglearn"/>
+        <method signature="Testnglearn.testcase5()[pri:0, instance:Testcases.Testnglearn@1c93f6e1]" name="testcase5" class="Testcases.Testnglearn"/>
+        <method signature="Testnglearn.testcase4()[pri:0, instance:Testcases.Testnglearn@7749bf93]" name="testcase4" class="Testcases.Testnglearn"/>
+        <method signature="Testnglearn.testcase5()[pri:0, instance:Testcases.Testnglearn@7749bf93]" name="testcase5" class="Testcases.Testnglearn"/>
+      </group> <!-- expectedexceptions -->
     </groups>
-    <test started-at="2025-08-13T08:22:39 IST" name="TestNG Testing practices" finished-at="2025-08-13T08:22:39 IST" duration-ms="194">
+    <test started-at="2025-08-16T22:22:47 IST" name="TestNG Testing practices" finished-at="2025-08-16T22:22:48 IST" duration-ms="259">
       <class name="Testcases.Testnglearn">
-        <test-method signature="testcase3()[pri:0, instance:Testcases.Testnglearn@632ceb35]" started-at="2025-08-13T08:22:39 IST" name="testcase3" finished-at="2025-08-13T08:22:39 IST" duration-ms="16" status="PASS">
+        <test-method signature="testcase4()[pri:0, instance:Testcases.Testnglearn@1c93f6e1]" started-at="2025-08-16T22:22:48 IST" name="testcase4" finished-at="2025-08-16T22:22:48 IST" duration-ms="62" status="PASS">
+          <exception class="java.lang.ArithmeticException">
+            <message>
+              <![CDATA[/ by zero]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.ArithmeticException: / by zero
+at pages.Testnglearnings.checkException(Testnglearnings.java:13)
+at Testcases.Testnglearn.testcase4(Testnglearn.java:65)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ArithmeticException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testcase3 -->
+        </test-method> <!-- testcase4 -->
+        <test-method signature="testcase5()[pri:0, instance:Testcases.Testnglearn@1c93f6e1]" started-at="2025-08-16T22:22:48 IST" name="testcase5" finished-at="2025-08-16T22:22:48 IST" duration-ms="62" status="FAIL">
+          <exception class="java.lang.ArithmeticException">
+            <message>
+              <![CDATA[/ by zero]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.ArithmeticException: / by zero
+at pages.Testnglearnings.checkException(Testnglearnings.java:13)
+at Testcases.Testnglearn.testcase5(Testnglearn.java:69)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ArithmeticException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase5 -->
       </class> <!-- Testcases.Testnglearn -->
     </test> <!-- TestNG Testing practices -->
-    <test started-at="2025-08-13T08:22:39 IST" name="TestNG running in safari" finished-at="2025-08-13T08:22:39 IST" duration-ms="18">
+    <test started-at="2025-08-16T22:22:48 IST" name="TestNG running in safari" finished-at="2025-08-16T22:22:48 IST" duration-ms="26">
       <class name="Testcases.Testnglearn">
-        <test-method signature="testcase3()[pri:0, instance:Testcases.Testnglearn@2b76ff4e]" started-at="2025-08-13T08:22:39 IST" name="testcase3" finished-at="2025-08-13T08:22:39 IST" duration-ms="6" status="PASS">
+        <test-method signature="testcase5()[pri:0, instance:Testcases.Testnglearn@7749bf93]" started-at="2025-08-16T22:22:48 IST" name="testcase5" finished-at="2025-08-16T22:22:48 IST" duration-ms="8" status="FAIL">
+          <exception class="java.lang.ArithmeticException">
+            <message>
+              <![CDATA[/ by zero]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.ArithmeticException: / by zero
+at pages.Testnglearnings.checkException(Testnglearnings.java:13)
+at Testcases.Testnglearn.testcase5(Testnglearn.java:69)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ArithmeticException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testcase3 -->
+        </test-method> <!-- testcase5 -->
+        <test-method signature="testcase4()[pri:0, instance:Testcases.Testnglearn@7749bf93]" started-at="2025-08-16T22:22:48 IST" name="testcase4" finished-at="2025-08-16T22:22:48 IST" duration-ms="8" status="PASS">
+          <exception class="java.lang.ArithmeticException">
+            <message>
+              <![CDATA[/ by zero]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.ArithmeticException: / by zero
+at pages.Testnglearnings.checkException(Testnglearnings.java:13)
+at Testcases.Testnglearn.testcase4(Testnglearn.java:65)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ArithmeticException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase4 -->
       </class> <!-- Testcases.Testnglearn -->
     </test> <!-- TestNG running in safari -->
   </suite> <!-- DemoTestNGSuite -->
