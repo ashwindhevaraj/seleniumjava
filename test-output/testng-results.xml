@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="10" passed="2" failed="2" skipped="0">
+<testng-results ignored="6" total="12" passed="4" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-16T22:22:47 IST" name="DemoTestNGSuite" finished-at="2025-08-16T22:22:48 IST" duration-ms="417">
+  <suite started-at="2025-08-20T08:48:46 IST" name="DemoTestNGSuite" finished-at="2025-08-20T08:48:46 IST" duration-ms="461">
     <groups>
       <group name="expectedexceptions">
-        <method signature="Testnglearn.testcase4()[pri:0, instance:Testcases.Testnglearn@1c93f6e1]" name="testcase4" class="Testcases.Testnglearn"/>
-        <method signature="Testnglearn.testcase5()[pri:0, instance:Testcases.Testnglearn@1c93f6e1]" name="testcase5" class="Testcases.Testnglearn"/>
-        <method signature="Testnglearn.testcase4()[pri:0, instance:Testcases.Testnglearn@7749bf93]" name="testcase4" class="Testcases.Testnglearn"/>
-        <method signature="Testnglearn.testcase5()[pri:0, instance:Testcases.Testnglearn@7749bf93]" name="testcase5" class="Testcases.Testnglearn"/>
+        <method signature="Testnglearn.testcase5()[pri:0, instance:Testcases.Testnglearn@10a9d961]" name="testcase5" class="Testcases.Testnglearn"/>
+        <method signature="Testnglearn.testcase6()[pri:0, instance:Testcases.Testnglearn@10a9d961]" name="testcase6" class="Testcases.Testnglearn"/>
+        <method signature="Testnglearn.testcase4()[pri:0, instance:Testcases.Testnglearn@10a9d961]" name="testcase4" class="Testcases.Testnglearn"/>
+        <method signature="Testnglearn.testcase5()[pri:0, instance:Testcases.Testnglearn@554e218]" name="testcase5" class="Testcases.Testnglearn"/>
+        <method signature="Testnglearn.testcase6()[pri:0, instance:Testcases.Testnglearn@554e218]" name="testcase6" class="Testcases.Testnglearn"/>
+        <method signature="Testnglearn.testcase4()[pri:0, instance:Testcases.Testnglearn@554e218]" name="testcase4" class="Testcases.Testnglearn"/>
       </group> <!-- expectedexceptions -->
     </groups>
-    <test started-at="2025-08-16T22:22:47 IST" name="TestNG Testing practices" finished-at="2025-08-16T22:22:48 IST" duration-ms="259">
+    <test started-at="2025-08-20T08:48:46 IST" name="TestNG Testing practices" finished-at="2025-08-20T08:48:46 IST" duration-ms="298">
       <class name="Testcases.Testnglearn">
-        <test-method signature="testcase4()[pri:0, instance:Testcases.Testnglearn@1c93f6e1]" started-at="2025-08-16T22:22:48 IST" name="testcase4" finished-at="2025-08-16T22:22:48 IST" duration-ms="62" status="PASS">
+        <test-method signature="testcase4()[pri:0, instance:Testcases.Testnglearn@10a9d961]" started-at="2025-08-20T08:48:46 IST" name="testcase4" finished-at="2025-08-20T08:48:46 IST" duration-ms="40" status="PASS">
           <exception class="java.lang.ArithmeticException">
             <message>
               <![CDATA[/ by zero]]>
@@ -43,7 +45,7 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testcase4 -->
-        <test-method signature="testcase5()[pri:0, instance:Testcases.Testnglearn@1c93f6e1]" started-at="2025-08-16T22:22:48 IST" name="testcase5" finished-at="2025-08-16T22:22:48 IST" duration-ms="62" status="FAIL">
+        <test-method signature="testcase5()[pri:0, instance:Testcases.Testnglearn@10a9d961]" started-at="2025-08-20T08:48:46 IST" name="testcase5" finished-at="2025-08-20T08:48:46 IST" duration-ms="40" status="FAIL">
           <exception class="java.lang.ArithmeticException">
             <message>
               <![CDATA[/ by zero]]>
@@ -73,11 +75,15 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testcase5 -->
+        <test-method signature="testcase6()[pri:0, instance:Testcases.Testnglearn@10a9d961]" started-at="2025-08-20T08:48:46 IST" name="testcase6" finished-at="2025-08-20T08:48:46 IST" depends-on-methods="Testcases.Testnglearn.testcase5" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase6 -->
       </class> <!-- Testcases.Testnglearn -->
     </test> <!-- TestNG Testing practices -->
-    <test started-at="2025-08-16T22:22:48 IST" name="TestNG running in safari" finished-at="2025-08-16T22:22:48 IST" duration-ms="26">
+    <test started-at="2025-08-20T08:48:46 IST" name="TestNG running in safari" finished-at="2025-08-20T08:48:46 IST" duration-ms="39">
       <class name="Testcases.Testnglearn">
-        <test-method signature="testcase5()[pri:0, instance:Testcases.Testnglearn@7749bf93]" started-at="2025-08-16T22:22:48 IST" name="testcase5" finished-at="2025-08-16T22:22:48 IST" duration-ms="8" status="FAIL">
+        <test-method signature="testcase5()[pri:0, instance:Testcases.Testnglearn@554e218]" started-at="2025-08-20T08:48:46 IST" name="testcase5" finished-at="2025-08-20T08:48:46 IST" duration-ms="3" status="FAIL">
           <exception class="java.lang.ArithmeticException">
             <message>
               <![CDATA[/ by zero]]>
@@ -107,7 +113,7 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testcase5 -->
-        <test-method signature="testcase4()[pri:0, instance:Testcases.Testnglearn@7749bf93]" started-at="2025-08-16T22:22:48 IST" name="testcase4" finished-at="2025-08-16T22:22:48 IST" duration-ms="8" status="PASS">
+        <test-method signature="testcase4()[pri:0, instance:Testcases.Testnglearn@554e218]" started-at="2025-08-20T08:48:46 IST" name="testcase4" finished-at="2025-08-20T08:48:46 IST" duration-ms="6" status="PASS">
           <exception class="java.lang.ArithmeticException">
             <message>
               <![CDATA[/ by zero]]>
@@ -137,6 +143,10 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testcase4 -->
+        <test-method signature="testcase6()[pri:0, instance:Testcases.Testnglearn@554e218]" started-at="2025-08-20T08:48:46 IST" name="testcase6" finished-at="2025-08-20T08:48:46 IST" depends-on-methods="Testcases.Testnglearn.testcase5" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase6 -->
       </class> <!-- Testcases.Testnglearn -->
     </test> <!-- TestNG running in safari -->
   </suite> <!-- DemoTestNGSuite -->
