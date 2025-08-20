@@ -68,6 +68,10 @@ public void testcase4() {
 public void testcase5() {
 	m.checkException();
 }
+@Test(groups= {"expectedexceptions"},dependsOnMethods = {"testcase5"}, alwaysRun = true)
+public void testcase6() {
+	m.dependsoncheck();
+}
 }
 
 //in beforeSuite
