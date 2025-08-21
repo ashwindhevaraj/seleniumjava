@@ -6,6 +6,7 @@
 			<include name="expectedexceptions"/>
 		</run>
 	</groups>
+	<parameter name="browser" value="ashbrowser"/>
   <test thread-count="5" name="TestNG Testing practices">
     <classes>
       <class name="Testcases.Testnglearn"/>
