@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.Testnglearnings;
 public class Testnglearn {
@@ -72,8 +73,12 @@ public void testcase5() {
 public void testcase6() {
 	m.dependsoncheck();
 }
+@Test(groups= {"expectedexceptions"})
+@Parameters("browser")
+public void testcase7(String browser) {
+	System.out.println("passed this parameter from testng file "+browser);
 }
-
+}
 //in beforeSuite
 //in beforeTest
 //in beforeClass
