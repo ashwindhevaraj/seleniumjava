@@ -3,10 +3,13 @@
 <suite name="DemoTestNGSuite" parallel="instances" thread-count="2">
 	<groups>
 		<run>
-			<include name="expectedexceptions"/>
+			<include name="dataprovidercheck"/>
 		</run>
 	</groups>
 	<parameter name="browser" value="ashbrowser"/>
+	<listeners>
+		<listener class-name = "Testcases.Listenerreportcheck" />
+	</listeners>
   <test thread-count="5" name="TestNG Testing practices">
     <classes>
       <class name="Testcases.Testnglearn"/>

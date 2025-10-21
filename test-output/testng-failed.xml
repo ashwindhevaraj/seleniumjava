@@ -1,33 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="instances" name="Failed suite [DemoTestNGSuite]" guice-stage="DEVELOPMENT">
-  <parameter name="browser" value="ashbrowser"/>
-  <test thread-count="2" parallel="instances" name="TestNG Testing practices(failed)">
-    <groups>
-      <run>
-        <include name="expectedexceptions"/>
-      </run>
-    </groups>
+<suite thread-count="2" parallel="instances" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="instances" name="Test(failed)">
     <classes>
+      <class name="Testcases.HomepageTest">
+        <methods>
+          <include name="testlogin"/>
+          <include name="rampdown"/>
+          <include name="setupTest"/>
+          <include name="test_login"/>
+        </methods>
+      </class> <!-- Testcases.HomepageTest -->
       <class name="Testcases.Testnglearn">
         <methods>
+          <include name="afterSuite"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="afterClass"/>
+          <include name="afterTest"/>
+          <include name="testcase7"/>
+          <include name="beforeSuite"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
           <include name="testcase5"/>
         </methods>
       </class> <!-- Testcases.Testnglearn -->
     </classes>
-  </test> <!-- TestNG Testing practices(failed) -->
-  <test thread-count="2" parallel="instances" name="TestNG running in safari(failed)">
-    <groups>
-      <run>
-        <include name="expectedexceptions"/>
-      </run>
-    </groups>
-    <classes>
-      <class name="Testcases.Testnglearn">
-        <methods>
-          <include name="testcase5"/>
-        </methods>
-      </class> <!-- Testcases.Testnglearn -->
-    </classes>
-  </test> <!-- TestNG running in safari(failed) -->
-</suite> <!-- Failed suite [DemoTestNGSuite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

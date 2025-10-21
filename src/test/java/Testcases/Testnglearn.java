@@ -8,11 +8,20 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.Testnglearnings;
 public class Testnglearn {
 	Testnglearnings m = new Testnglearnings("ash");
+	@DataProvider(name="testdata")
+	public Object[][] checkdata(){
+		return new Object[][] {{2,3},{4,5}};
+	}
+	@DataProvider(name="testdata2")
+	public Object[][] checkdata3(){
+		return new Object[][] {{new Testdatacheck(8,9)}};
+	}
 @BeforeMethod
 public void beforeMethod() {
    System.out.println("in beforeMethod");
@@ -78,7 +87,16 @@ public void testcase6() {
 public void testcase7(String browser) {
 	System.out.println("passed this parameter from testng file "+browser);
 }
+@Test(groups= {"dataprovidercheck"}, dataProvider="testdata")
+public void testcase7(Integer i,Integer j) {
+	System.out.println("Data from dataprovider "+i+"and another value "+j);
+	}
+@Test(groups = {"dataprovidercheck"}, dataProvider="testdata2")
+public void testcase8(Testdatacheck v) {
+	System.out.println(v.getI()+" "+v.getK());
 }
+}
+
 //in beforeSuite
 //in beforeTest
 //in beforeClass

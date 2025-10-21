@@ -1,176 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="14" passed="6" failed="2" skipped="0">
+<testng-results ignored="14" total="20" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-21T07:41:26 IST" name="DemoTestNGSuite" finished-at="2025-08-21T07:41:26 IST" duration-ms="582">
+  <suite started-at="2025-10-21T08:42:43 IST" name="DemoTestNGSuite" finished-at="2025-10-21T08:42:43 IST" duration-ms="502">
     <groups>
-      <group name="expectedexceptions">
-        <method signature="Testnglearn.testcase5()[pri:0, instance:Testcases.Testnglearn@141e5bef]" name="testcase5" class="Testcases.Testnglearn"/>
-        <method signature="Testnglearn.testcase6()[pri:0, instance:Testcases.Testnglearn@141e5bef]" name="testcase6" class="Testcases.Testnglearn"/>
-        <method signature="Testnglearn.testcase4()[pri:0, instance:Testcases.Testnglearn@141e5bef]" name="testcase4" class="Testcases.Testnglearn"/>
-        <method signature="Testnglearn.testcase7(java.lang.String)[pri:0, instance:Testcases.Testnglearn@141e5bef]" name="testcase7" class="Testcases.Testnglearn"/>
-        <method signature="Testnglearn.testcase5()[pri:0, instance:Testcases.Testnglearn@1a20270e]" name="testcase5" class="Testcases.Testnglearn"/>
-        <method signature="Testnglearn.testcase6()[pri:0, instance:Testcases.Testnglearn@1a20270e]" name="testcase6" class="Testcases.Testnglearn"/>
-        <method signature="Testnglearn.testcase4()[pri:0, instance:Testcases.Testnglearn@1a20270e]" name="testcase4" class="Testcases.Testnglearn"/>
-        <method signature="Testnglearn.testcase7(java.lang.String)[pri:0, instance:Testcases.Testnglearn@1a20270e]" name="testcase7" class="Testcases.Testnglearn"/>
-      </group> <!-- expectedexceptions -->
+      <group name="dataprovidercheck">
+        <method signature="Testnglearn.testcase7(java.lang.Integer,java.lang.Integer)[pri:0, instance:Testcases.Testnglearn@39de3d36]" name="testcase7" class="Testcases.Testnglearn"/>
+        <method signature="Testnglearn.testcase8(Testcases.Testdatacheck)[pri:0, instance:Testcases.Testnglearn@39de3d36]" name="testcase8" class="Testcases.Testnglearn"/>
+        <method signature="Testnglearn.testcase7(java.lang.Integer,java.lang.Integer)[pri:0, instance:Testcases.Testnglearn@676cf48]" name="testcase7" class="Testcases.Testnglearn"/>
+        <method signature="Testnglearn.testcase8(Testcases.Testdatacheck)[pri:0, instance:Testcases.Testnglearn@676cf48]" name="testcase8" class="Testcases.Testnglearn"/>
+      </group> <!-- dataprovidercheck -->
     </groups>
-    <test started-at="2025-08-21T07:41:26 IST" name="TestNG Testing practices" finished-at="2025-08-21T07:41:26 IST" duration-ms="402">
+    <test started-at="2025-10-21T08:42:43 IST" name="TestNG Testing practices" finished-at="2025-10-21T08:42:43 IST" duration-ms="327">
       <class name="Testcases.Testnglearn">
-        <test-method signature="testcase4()[pri:0, instance:Testcases.Testnglearn@141e5bef]" started-at="2025-08-21T07:41:26 IST" name="testcase4" finished-at="2025-08-21T07:41:26 IST" duration-ms="53" status="PASS">
-          <exception class="java.lang.ArithmeticException">
-            <message>
-              <![CDATA[/ by zero]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ArithmeticException: / by zero
-at pages.Testnglearnings.checkException(Testnglearnings.java:13)
-at Testcases.Testnglearn.testcase4(Testnglearn.java:66)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ArithmeticException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testcase4 -->
-        <test-method signature="testcase5()[pri:0, instance:Testcases.Testnglearn@141e5bef]" started-at="2025-08-21T07:41:26 IST" name="testcase5" finished-at="2025-08-21T07:41:26 IST" duration-ms="53" status="FAIL">
-          <exception class="java.lang.ArithmeticException">
-            <message>
-              <![CDATA[/ by zero]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ArithmeticException: / by zero
-at pages.Testnglearnings.checkException(Testnglearnings.java:13)
-at Testcases.Testnglearn.testcase5(Testnglearn.java:70)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ArithmeticException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testcase5 -->
-        <test-method signature="testcase7(java.lang.String)[pri:0, instance:Testcases.Testnglearn@141e5bef]" started-at="2025-08-21T07:41:26 IST" name="testcase7" finished-at="2025-08-21T07:41:26 IST" duration-ms="52" status="PASS">
+        <test-method signature="testcase7(java.lang.Integer,java.lang.Integer)[pri:0, instance:Testcases.Testnglearn@39de3d36]" started-at="2025-10-21T08:42:43 IST" name="testcase7" data-provider="testdata" finished-at="2025-10-21T08:42:43 IST" duration-ms="31" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ashbrowser]]>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testcase7 -->
-        <test-method signature="testcase6()[pri:0, instance:Testcases.Testnglearn@141e5bef]" started-at="2025-08-21T07:41:26 IST" name="testcase6" finished-at="2025-08-21T07:41:26 IST" depends-on-methods="Testcases.Testnglearn.testcase5" duration-ms="5" status="PASS">
+        <test-method signature="testcase8(Testcases.Testdatacheck)[pri:0, instance:Testcases.Testnglearn@39de3d36]" started-at="2025-10-21T08:42:43 IST" name="testcase8" data-provider="testdata2" finished-at="2025-10-21T08:42:43 IST" duration-ms="31" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Testcases.Testdatacheck@201c4204]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testcase6 -->
+        </test-method> <!-- testcase8 -->
+        <test-method signature="testcase7(java.lang.Integer,java.lang.Integer)[pri:0, instance:Testcases.Testnglearn@39de3d36]" started-at="2025-10-21T08:42:43 IST" name="testcase7" data-provider="testdata" finished-at="2025-10-21T08:42:43 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase7 -->
       </class> <!-- Testcases.Testnglearn -->
     </test> <!-- TestNG Testing practices -->
-    <test started-at="2025-08-21T07:41:26 IST" name="TestNG running in safari" finished-at="2025-08-21T07:41:26 IST" duration-ms="53">
+    <test started-at="2025-10-21T08:42:43 IST" name="TestNG running in safari" finished-at="2025-10-21T08:42:43 IST" duration-ms="44">
       <class name="Testcases.Testnglearn">
-        <test-method signature="testcase4()[pri:0, instance:Testcases.Testnglearn@1a20270e]" started-at="2025-08-21T07:41:26 IST" name="testcase4" finished-at="2025-08-21T07:41:26 IST" duration-ms="17" status="PASS">
-          <exception class="java.lang.ArithmeticException">
-            <message>
-              <![CDATA[/ by zero]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ArithmeticException: / by zero
-at pages.Testnglearnings.checkException(Testnglearnings.java:13)
-at Testcases.Testnglearn.testcase4(Testnglearn.java:66)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ArithmeticException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testcase4 -->
-        <test-method signature="testcase5()[pri:0, instance:Testcases.Testnglearn@1a20270e]" started-at="2025-08-21T07:41:26 IST" name="testcase5" finished-at="2025-08-21T07:41:26 IST" duration-ms="30" status="FAIL">
-          <exception class="java.lang.ArithmeticException">
-            <message>
-              <![CDATA[/ by zero]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ArithmeticException: / by zero
-at pages.Testnglearnings.checkException(Testnglearnings.java:13)
-at Testcases.Testnglearn.testcase5(Testnglearn.java:70)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ArithmeticException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testcase5 -->
-        <test-method signature="testcase7(java.lang.String)[pri:0, instance:Testcases.Testnglearn@1a20270e]" started-at="2025-08-21T07:41:26 IST" name="testcase7" finished-at="2025-08-21T07:41:26 IST" duration-ms="16" status="PASS">
+        <test-method signature="testcase8(Testcases.Testdatacheck)[pri:0, instance:Testcases.Testnglearn@676cf48]" started-at="2025-10-21T08:42:43 IST" name="testcase8" data-provider="testdata2" finished-at="2025-10-21T08:42:43 IST" duration-ms="7" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ashbrowser]]>
+                <![CDATA[Testcases.Testdatacheck@6c25a0e3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase8 -->
+        <test-method signature="testcase7(java.lang.Integer,java.lang.Integer)[pri:0, instance:Testcases.Testnglearn@676cf48]" started-at="2025-10-21T08:42:43 IST" name="testcase7" data-provider="testdata" finished-at="2025-10-21T08:42:43 IST" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testcase7 -->
-        <test-method signature="testcase6()[pri:0, instance:Testcases.Testnglearn@1a20270e]" started-at="2025-08-21T07:41:26 IST" name="testcase6" finished-at="2025-08-21T07:41:26 IST" depends-on-methods="Testcases.Testnglearn.testcase5" duration-ms="2" status="PASS">
+        <test-method signature="testcase7(java.lang.Integer,java.lang.Integer)[pri:0, instance:Testcases.Testnglearn@676cf48]" started-at="2025-10-21T08:42:43 IST" name="testcase7" data-provider="testdata" finished-at="2025-10-21T08:42:43 IST" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testcase6 -->
+        </test-method> <!-- testcase7 -->
       </class> <!-- Testcases.Testnglearn -->
     </test> <!-- TestNG running in safari -->
   </suite> <!-- DemoTestNGSuite -->
