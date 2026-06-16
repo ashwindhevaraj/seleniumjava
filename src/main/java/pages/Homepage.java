@@ -1,5 +1,4 @@
 package pages;
-
 import java.io.IOException;
 import java.text.NumberFormat;
 import java.time.Duration;
@@ -19,46 +18,59 @@ import locators.Elements;
 import locators.Widgets;
 import locators.Alertsclass;
 import pages.Baseclass;
-public class Homepage extends Baseclass{
-	private WebDriver driver1;
-	public Wait<WebDriver> waits;
-	public Homepage(WebDriver driver,WebDriverWait wait){
-	    driver1=driver;
-		this.waits=wait;
+import utilities.Screenshot;
+import base.BasePage;
+public class Homepage extends BasePage{
+	public Homepage(WebDriver driver){
+		super(driver);
 	}
     //This method will handle all types of alert and as part of learning this is the first topic
     public void alerthandling(){
-    	WebElement alerticon1=driver1.findElement(Alertsclass.alerticon);
-    	waits.until(d ->alerticon1.isDisplayed());
-    	alerticon1.click();    	
-    	WebElement alertleftmenu1=driver1.findElement(Alertsclass.alertleftmenu);
-    	waits.until(d ->alertleftmenu1.isDisplayed());
-    	alertleftmenu1.click();
-    	WebElement firstclickme1=driver1.findElement(Alertsclass.firstclickme);
-    	waits.until(d ->firstclickme1.isDisplayed());
-    	firstclickme1.click();
-    	String text=driver1.switchTo().alert().getText();
+    	scroll(Alertsclass.alerticon);
+    	waitutils.fluentWait(Alertsclass.alerticon).click();
+    	//click(Alertsclass.alerticon);    	
+    	//WebElement alertleftmenu1=driver.findElement(Alertsclass.alertleftmenu);
+    	//waits.until(d ->alertleftmenu1.isDisplayed());
+    	scroll(Alertsclass.alertleftmenu);
+    	System.out.println(Screenshot.captureScreenshot(driver,"loginpage"));
+    	waitutils.fluentWait(Alertsclass.alertleftmenu).click();
+    	//click(Alertsclass.alertleftmenu);
+    	//alertleftmenu1.click();
+    	//WebElement firstclickme1=driver.findElement(Alertsclass.firstclickme);
+    	//waits.until(d ->firstclickme1.isDisplayed());
+    	scroll(Alertsclass.firstclickme);
+    	waitutils.fluentWait(Alertsclass.firstclickme).click();
+    	//click(Alertsclass.firstclickme);
+    	//firstclickme1.click();
+    	String text=driver.switchTo().alert().getText();
     	System.out.println(text);
-    	driver1.switchTo().alert().accept();
-    	WebElement timeralert1 = driver1.findElement(Alertsclass.timeralert);
-    	timeralert1.click();
-    	waits.until(ExpectedConditions.alertIsPresent()); //for alert to present in screen- we need to use explicit wait and no implicit wait will work here
-    	System.out.println(driver1.switchTo().alert().getText());
-    	driver1.switchTo().alert().accept();
-    	WebElement confirmbutton1 = driver1.findElement(Alertsclass.confirmbutton);
-    	confirmbutton1.click();
-    	System.out.println(driver1.switchTo().alert().getText());
-    	driver1.switchTo().alert().accept();
-    	WebElement promptbox1 = driver1.findElement(Alertsclass.promptbutton);
-    	waits.until(d ->promptbox1.isDisplayed());
-    	promptbox1.click();
-    	waits.until(ExpectedConditions.alertIsPresent());
-    	Alert alert=driver1.switchTo().alert();
+    	driver.switchTo().alert().accept();
+    	//WebElement timeralert1 = driver.findElement(Alertsclass.timeralert);
+    	//timeralert1.click();
+    	waitutils.fluentWait(Alertsclass.timeralert).click();
+    	//click(Alertsclass.timeralert);
+    	//waits.until(ExpectedConditions.alertIsPresent()); //for alert to present in screen- we need to use explicit wait and no implicit wait will work here
+    	Alert temp=waitutils.waitforalert();
+    	System.out.println(driver.switchTo().alert().getText());
+    	driver.switchTo().alert().accept();
+    	//WebElement confirmbutton1 = driver.findElement(Alertsclass.confirmbutton);
+    	//confirmbutton1.click();
+    	waitutils.fluentWait(Alertsclass.confirmbutton).click();
+    	//click(Alertsclass.confirmbutton);
+    	System.out.println(driver.switchTo().alert().getText());
+    	driver.switchTo().alert().accept();
+    	waitutils.fluentWait(Alertsclass.promptbutton).click();
+    	//click(Alertsclass.promptbutton);
+    	//WebElement promptbox1 = driver.findElement();
+    	//waits.until(d ->promptbox1.isDisplayed());
+    	//promptbox1.click();
+    	//waits.until(ExpectedConditions.alertIsPresent());
+    	Alert alert=driver.switchTo().alert();
     	System.out.println(alert.getText());
     	alert.sendKeys("HI i am automation text");
     	alert.accept();
     }
-    public void switchingframes() {
+    /*public void switchingframes() {
     	WebElement alerticon1=driver1.findElement(Alertsclass.alerticon);
     	waits.until(d ->alerticon1.isDisplayed());
     	alerticon1.click();
@@ -77,12 +89,13 @@ public class Homepage extends Baseclass{
     }
     public void elementmenuclick() {
     	WebElement elemenu=driver1.findElement(Elements.elementmenu);
+    	((JavascriptExecutor)driver1).executeScript("arguments[0].scrollIntoView();", elemenu);
     	waits.until(d ->elemenu.isDisplayed());
     	elemenu.click();
     }
     public void widgetmenuclick() {
     	WebElement widgetmenu1=driver1.findElement(Widgets.widgetmainmenu);
-    	//((JavascriptExecutor)driver1).executeScript("arguments[0].scrollIntoView();", widgetmenu1);
+    	((JavascriptExecutor)driver1).executeScript("arguments[0].scrollIntoView();", widgetmenu1);
     	waits.until(d ->widgetmenu1.isDisplayed());
     	widgetmenu1.click();
     }
@@ -340,7 +353,7 @@ public class Homepage extends Baseclass{
     		}
     	}*/
     	
-    }
+   /* }
     public void brokenlinkcheck() throws IOException {
     	elementmenuclick();
     	WebElement brokenlink1 = driver1.findElement(Elements.brokenlinkmenu);
@@ -350,6 +363,7 @@ public class Homepage extends Baseclass{
     	brokenlink(driver1);
     }
     public void tooltipvalidations() {
+    	elementmenuclick();
     	widgetmenuclick();
     	WebElement tooltipmenu1=driver1.findElement(Widgets.tooltipsubmenu);
     	((JavascriptExecutor)driver1).executeScript("arguments[0].scrollIntoView();", tooltipmenu1);
@@ -359,6 +373,7 @@ public class Homepage extends Baseclass{
     	waits.until(d ->hoverbutton1.isDisplayed());
     	actionclass(driver1,hoverbutton1,"hover");
     	WebElement tooltiptext1=driver1.findElement(Widgets.tooltiptext);
+    	waits.until(d -> tooltiptext1.isDisplayed());
     	System.out.println(tooltiptext1.getText().toString());
-    }
+    }*/
 }
