@@ -3,7 +3,7 @@ package locators;
 import org.openqa.selenium.By;
 
 public class Widgets{
-	public static final By widgetmainmenu = By.xpath("//h5[contains(text(),'Widgets')]");
+	public static final By widgetmainmenu = By.xpath("//div[contains(text(),'Widgets')]");
 	public static final By widgetmenu= By.xpath("//div[contains(text(),'Widgets')]");
 	public static final By selectmenu = By.xpath("//span[text()='Select Menu']");
 	//select menu elements
@@ -48,6 +48,6 @@ public class Widgets{
 	}
 	public static final By autocompletemenu = By.xpath("//span[contains(text(),'Auto Complete')]");
 	public static final By autocompletetextbox = By.xpath("//div[@id='autoCompleteMultipleContainer']");
-	public static final By tooltiptext = By.xpath("//*[contains(text(),'You hovered over the Button')]");
+	public static final By tooltiptext = By.xpath("//*[starts-with(text(),'You hovered over the Button')]");
 	
 			}

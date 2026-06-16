@@ -1,8 +1,13 @@
 package Testcases;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import base.BaseTest;
 
 //import com.sun.tools.sjavac.Log;
 
@@ -25,14 +30,13 @@ import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
-class HomepageTest extends Baseclass {
-	private Homepage hmpage;
-	@BeforeClass
-	public void setupTest() {
-		browserSetup("chrome");
-		hmpage=new Homepage(driver,waits);
+class HomepageTest extends BaseTest {
+	public Homepage hmpage;
+	@BeforeTest
+	public void setup() {
+		hmpage=new Homepage(driver);
 	}
-	@AfterClass
+	@AfterTest
 	public void rampdown() {
 		teardown();
 	}
@@ -64,11 +68,12 @@ class HomepageTest extends Baseclass {
 	}
 	@Test()
 	public void test_login() throws IOException {
+		
 		//this line extracts data from resource bundle available in src/main/resources/config.properties
 		ResourceBundle rb=ResourceBundle.getBundle("config");
 		System.out.println(rb.getString("username"));
-		openurl("https://demoqa.com/");
-		//hmpage.alerthandling();
+		driver.get("https://demoqa.com/");
+		hmpage.alerthandling();
 		//hmpage.switchingframes();
 		//browserCommands();
 		//navigationCommands();
@@ -93,7 +98,7 @@ class HomepageTest extends Baseclass {
 		//	e.printStackTrace();
 		//}
 		//hmpage.brokenlinkcheck();
-		hmpage.tooltipvalidations();
+		//hmpage.tooltipvalidations();
 		Assert.assertEquals(true, true);
 	}
 	@Test(dataProvider="excelread1")

@@ -9,9 +9,13 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -25,10 +29,12 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.ResourceBundle;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -40,23 +46,40 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import locators.Widgets;
 public class Baseclass {
 	protected WebDriver driver;
-	protected WebDriverWait waits;
+	//protected WebDriverWait waits;
+	protected Wait<WebDriver> waits;
 	public static Logger log;
-	public void browserSetup(String browser) {
+	public void browserSetup(String browser){
 		log = LogManager.getLogger(Baseclass.class);
 		if(browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			log.info("chromedriver setup completed- it will open up");
-			driver=new ChromeDriver();
+			//driver=new ChromeDriver(); if you run in local
+			ChromeOptions options=new ChromeOptions();
+			try {
+				driver=new RemoteWebDriver(new URL("http://192.168.0.105:4444"),options);
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		else if(browser.equalsIgnoreCase("edge")) {
 			WebDriverManager.edgedriver().setup();
 			//log.info("edgedriver setup completed- it will open up");
-			driver=new EdgeDriver();
+			//driver=new EdgeDriver(); use this if you run in local
+			EdgeOptions options = new EdgeOptions();
+			try {
+				driver=new RemoteWebDriver(new URL("http://192.168.0.105:4444"),options);
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		//below line used for implicitly wait
 		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		waits=new WebDriverWait(driver,Duration.ofSeconds(15));
+		waits=new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(30L))
+				.pollingEvery(Duration.ofSeconds(5L))
+				.ignoring(NoSuchElementException.class);
 		driver.manage().window().maximize();
 	}
 	public void teardown() {
