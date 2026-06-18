@@ -3,7 +3,7 @@ package locators;
 import org.openqa.selenium.By;
 
 public class Widgets{
-	public static final By widgetmainmenu = By.xpath("//div[contains(text(),'Widgets')]");
+	public static final By widgetmainmenu = By.xpath("//div//h5[contains(text(),'Widgets')]");
 	public static final By widgetmenu= By.xpath("//div[contains(text(),'Widgets')]");
 	public static final By selectmenu = By.xpath("//span[text()='Select Menu']");
 	//select menu elements

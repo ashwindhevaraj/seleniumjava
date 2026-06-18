@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="4" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <parameter name="browser" value="chrome"/>
+  <parameter name="browser" value="edge"/>
   <test thread-count="4" name="ChromeTest(failed)">
     <classes>
       <class name="Testcases.Testnglearntest">
@@ -20,6 +20,15 @@
           <include name="beforeClass"/>
         </methods>
       </class> <!-- Testcases.Testnglearntest -->
+      <class name="Testcases.HomepageTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="setupTest"/>
+          <include name="setup"/>
+          <include name="rampdown"/>
+          <include name="test_login"/>
+        </methods>
+      </class> <!-- Testcases.HomepageTest -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

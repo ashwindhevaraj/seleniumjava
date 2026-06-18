@@ -73,13 +73,13 @@ class HomepageTest extends BaseTest {
 		ResourceBundle rb=ResourceBundle.getBundle("config");
 		System.out.println(rb.getString("username"));
 		driver.get("https://demoqa.com/");
-		hmpage.alerthandling();
+		//hmpage.alerthandling();
 		//hmpage.switchingframes();
 		//browserCommands();
 		//navigationCommands();
 		//hmpage.radiobuttonhandling();
 		//hmpage.checkboxhandling();
-		//hmpage.selecthandling();
+		hmpage.selecthandling();
 		//hmpage.oldselecthandling();
 		//hmpage.multiselecthandling();
 		//hmpage.linktexthandling("Click Here for Valid Link");

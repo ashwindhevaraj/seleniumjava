@@ -19,139 +19,85 @@ import locators.Widgets;
 import locators.Alertsclass;
 import pages.Baseclass;
 import utilities.Screenshot;
+import utilities.Waitutils;
 import base.BasePage;
 public class Homepage extends BasePage{
 	public Homepage(WebDriver driver){
 		super(driver);
 	}
     //This method will handle all types of alert and as part of learning this is the first topic
-    public void alerthandling(){
+    /*public void alerthandling(){
     	scroll(Alertsclass.alerticon);
-    	waitutils.fluentWait(Alertsclass.alerticon).click();
-    	//click(Alertsclass.alerticon);    	
-    	//WebElement alertleftmenu1=driver.findElement(Alertsclass.alertleftmenu);
-    	//waits.until(d ->alertleftmenu1.isDisplayed());
+    	click(Alertsclass.alerticon);
     	scroll(Alertsclass.alertleftmenu);
     	System.out.println(Screenshot.captureScreenshot(driver,"loginpage"));
-    	waitutils.fluentWait(Alertsclass.alertleftmenu).click();
-    	//click(Alertsclass.alertleftmenu);
-    	//alertleftmenu1.click();
-    	//WebElement firstclickme1=driver.findElement(Alertsclass.firstclickme);
-    	//waits.until(d ->firstclickme1.isDisplayed());
+    	click(Alertsclass.alertleftmenu);
     	scroll(Alertsclass.firstclickme);
-    	waitutils.fluentWait(Alertsclass.firstclickme).click();
-    	//click(Alertsclass.firstclickme);
-    	//firstclickme1.click();
-    	String text=driver.switchTo().alert().getText();
+    	click(Alertsclass.firstclickme);
+    	Alert alert=switchtoalert();
+    	String text=alert.getText();
     	System.out.println(text);
-    	driver.switchTo().alert().accept();
-    	//WebElement timeralert1 = driver.findElement(Alertsclass.timeralert);
-    	//timeralert1.click();
-    	waitutils.fluentWait(Alertsclass.timeralert).click();
-    	//click(Alertsclass.timeralert);
-    	//waits.until(ExpectedConditions.alertIsPresent()); //for alert to present in screen- we need to use explicit wait and no implicit wait will work here
-    	Alert temp=waitutils.waitforalert();
-    	System.out.println(driver.switchTo().alert().getText());
-    	driver.switchTo().alert().accept();
-    	//WebElement confirmbutton1 = driver.findElement(Alertsclass.confirmbutton);
-    	//confirmbutton1.click();
-    	waitutils.fluentWait(Alertsclass.confirmbutton).click();
-    	//click(Alertsclass.confirmbutton);
-    	System.out.println(driver.switchTo().alert().getText());
-    	driver.switchTo().alert().accept();
-    	waitutils.fluentWait(Alertsclass.promptbutton).click();
-    	//click(Alertsclass.promptbutton);
-    	//WebElement promptbox1 = driver.findElement();
-    	//waits.until(d ->promptbox1.isDisplayed());
-    	//promptbox1.click();
-    	//waits.until(ExpectedConditions.alertIsPresent());
-    	Alert alert=driver.switchTo().alert();
-    	System.out.println(alert.getText());
-    	alert.sendKeys("HI i am automation text");
+    	alert.accept();
+    	click(Alertsclass.confirmbutton);
+    	Alert alert1=switchtoalert();
+    	System.out.println(alert1.getText());
+    	alert1.accept();
+    	click(Alertsclass.promptbutton);
+    	Alert alert2=switchtoalert();
+    	System.out.println(alert2.getText());
+    	alert2.sendKeys("HI i am automation text");
     	alert.accept();
     }
-    /*public void switchingframes() {
-    	WebElement alerticon1=driver1.findElement(Alertsclass.alerticon);
-    	waits.until(d ->alerticon1.isDisplayed());
-    	alerticon1.click();
-    	WebElement frameleftmenu1=driver1.findElement(Alertsclass.frameleftmenu);
-    	waits.until(d ->frameleftmenu1.isDisplayed());
-    	frameleftmenu1.click();
-    	driver1.switchTo().frame("frame1");
-    	WebElement bigframe1=driver1.findElement(Alertsclass.biggerframelocator);
-    	System.out.println(bigframe1.getText());
-    	// we need to switch to default before switching to another frame
-    	driver1.switchTo().defaultContent();
-    	driver1.switchTo().frame("frame2");
-    	WebElement bigframe2=driver1.findElement(Alertsclass.biggerframelocator);
-    	System.out.println(bigframe2.getText());
-    	driver1.switchTo().defaultContent();
-    }
+    public void switchingframes() {
+    	scroll(Alertsclass.alerticon);
+    	click(Alertsclass.alerticon);
+    	click(Alertsclass.frameleftmenu);
+    	switchtoframe("frame1");
+    	System.out.println(gettext(Alertsclass.biggerframelocator));
+    	switchtodefaultcontent();
+    	switchtoframe("frame2");
+    	System.out.println(gettext(Alertsclass.biggerframelocator));
+    	switchtodefaultcontent();
+    }*/
     public void elementmenuclick() {
-    	WebElement elemenu=driver1.findElement(Elements.elementmenu);
-    	((JavascriptExecutor)driver1).executeScript("arguments[0].scrollIntoView();", elemenu);
-    	waits.until(d ->elemenu.isDisplayed());
-    	elemenu.click();
+    	scroll(Elements.elementmenu);
+    	click(Elements.elementmenu);
     }
+    
     public void widgetmenuclick() {
-    	WebElement widgetmenu1=driver1.findElement(Widgets.widgetmainmenu);
-    	((JavascriptExecutor)driver1).executeScript("arguments[0].scrollIntoView();", widgetmenu1);
-    	waits.until(d ->widgetmenu1.isDisplayed());
-    	widgetmenu1.click();
+    	scroll(Widgets.widgetmainmenu);
+    	click(Widgets.widgetmainmenu);
     }
     public void alertmenuclick() {
-    	WebElement alerticon1=driver1.findElement(Alertsclass.alerticon);
-    	waits.until(d ->alerticon1.isDisplayed());
-    	alerticon1.click();
+    	click(Alertsclass.alerticon);
     }
-    public void radiobuttonhandling() {
+    /*public void radiobuttonhandling() {
     	elementmenuclick();
-    	WebElement radiomenu=driver1.findElement(Elements.radiobuttonmenu);
-    	waits.until(d ->radiomenu.isDisplayed());
-    	radiomenu.click();
-    	WebElement yesopt=driver1.findElement(Elements.yesoption_rdo);
-    	//waits.until(d ->yesopt.isDisplayed());
-    	//below is the check for radio button is selected or not
-    	System.out.println(yesopt.isSelected());
-    	yesopt.click();
-    	System.out.println(yesopt.isSelected());
-    	WebElement impressopt=driver1.findElement(Elements.impressive_rdo);
-    	waits.until(d ->impressopt.isDisplayed());
-    	impressopt.click();
-    	WebElement noopt=driver1.findElement(Elements.no_rdo);
-    	waits.until(d ->noopt.isDisplayed());
-    	//below is the check for radio button is enabled or disabled
-    	System.out.println(noopt.isEnabled());
+    	click(Elements.radiobuttonmenu);
+    	click(Elements.yesoption_rdo);
+    	System.out.println(isselectedcheck(Elements.yesoption_rdo));
+    	click(Elements.yesoption_rdo);
+    	System.out.println(isselectedcheck(Elements.yesoption_rdo));
+    	click(Elements.impressive_rdo);
+    	System.out.println(isdisplayedcheck(Elements.no_rdo));
+    	System.out.println(isenabledcheck(Elements.no_rdo));
     }
     public void checkboxhandling() {
     	elementmenuclick();
-    	WebElement checkmenu=driver1.findElement(Elements.checkboxmenu);
-    	waits.until(d ->checkmenu.isDisplayed());
-    	checkmenu.click();
-    	WebElement hometoggle1=driver1.findElement(Elements.hometoggle);
-    	waits.until(d ->hometoggle1.isDisplayed());
-    	hometoggle1.click();
-    	WebElement downloadtoggle1=driver1.findElement(Elements.downloadcheckbox);
-    	waits.until(d ->downloadtoggle1.isDisplayed());
-    	downloadtoggle1.click();
-    	WebElement excelfiletext1=driver1.findElement(Elements.excelfiletext);
-    	waits.until(d ->excelfiletext1.isDisplayed());
-    	excelfiletext1.click();
-    }
+    	refresh();
+    	click(Elements.hometoggle);
+    	click(Elements.downloadcheckbox);
+    	click(Elements.excelfiletext);
+    }*/
     public void selecthandling() {
     	widgetmenuclick();
-    	WebElement selectmenu1=driver1.findElement(Widgets.selectmenu);
-    	((JavascriptExecutor)driver1).executeScript("arguments[0].scrollIntoView();", selectmenu1);
-    	waits.until(d ->selectmenu1.isDisplayed());
-    	selectmenu1.click();
-    	WebElement selectdropdown1=driver1.findElement(Widgets.select_by_options);
-    	waits.until(d ->selectdropdown1.isDisplayed());
-    	selectdropdown1.click();
-    	WebElement selectexact=driver1.findElement(Widgets.selectdropdown("Group 1, option 1"));
-    	waits.until(d ->selectexact.isDisplayed());
-    	selectexact.click();
+    	refresh();
+    	scroll(Widgets.selectmenu);
+    	click(Widgets.selectmenu);
+    	click(Widgets.select_by_options);
+    	click(Widgets.selectdropdown("Group 1, option 1"));
     }
-    public void oldselecthandling() {
+    /*public void oldselecthandling() {
     	WebElement oldselect1 = driver1.findElement(Widgets.oldselectdpdown);
     	Select s = new Select(oldselect1);
     	s.selectByVisibleText("Black");
