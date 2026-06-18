@@ -88,14 +88,6 @@ public class Baseclass {
 			driver.quit();
 		}
 	}
-	public void browserCommands() {
-		//1.driver.get()
-		System.out.println(driver.getTitle());
-		System.out.println(driver.getCurrentUrl());
-		//System.out.println(driver.getPageSource());
-		//4.driver.close();
-		//5.driver.quit();
-		}
 	public void navigationCommands() {
 		// if we use driver.get()- it wont store browser history and cookies and we cant use below methods
 		driver.navigate().to("https://google.com");

@@ -24,13 +24,14 @@ public class Driverfactory {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--start-maximized");
-            System.out.println("chrome driver created");
             return new ChromeDriver(options);
         }
 
         case "edge" : {
             WebDriverManager.edgedriver().setup();
             EdgeOptions options = new EdgeOptions();
+            options.addArguments("--start-maximized");
+            //options.addArguments("headless");
             return new EdgeDriver(options);
         }
 

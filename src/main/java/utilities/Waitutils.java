@@ -14,11 +14,11 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 
 public class Waitutils {
-	protected WebDriver driver;
-	public Waitutils(WebDriver driver) {
+	//protected WebDriver driver;
+	/*public Waitutils(WebDriver driver) {
 		this.driver=driver;
-	}
-	public WebElement fluentWait(By locator) {
+	}*/
+	public static WebElement fluentWait(WebDriver driver,By locator) {
 		Wait<WebDriver> wait = new FluentWait<>(driver)
 				.withTimeout(Duration.ofSeconds(30))
 				.pollingEvery(Duration.ofSeconds(2))
@@ -27,13 +27,13 @@ public class Waitutils {
 				
 				return wait.until(d->d.findElement(locator));
     }
-	/*public static void click(WebDriver driver, By locator) {
-        fluentWait(driver, locator).click();
+	public static void click(WebDriver driver,By locator) {
+        fluentWait(driver,locator).click();
     }
-	public static void type(WebDriver driver, By locator, String value) {
-        fluentWait(driver, locator).sendKeys(value);
-    }*/
-	public Alert waitforalert() {
+	public static void type(WebDriver driver,By locator, String value) {
+        fluentWait(driver,locator).sendKeys(value);
+    }
+	public static Alert waitforalert(WebDriver driver,By locator) {
 		Wait<WebDriver> wait = new FluentWait<>(driver)
 				.withTimeout(Duration.ofSeconds(30))
 				.pollingEvery(Duration.ofSeconds(2));
