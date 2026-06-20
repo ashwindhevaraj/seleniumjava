@@ -1,11 +1,14 @@
 package base;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.FluentWait;
 
+import jdk.javadoc.internal.doclets.toolkit.taglets.snippet.Action;
 import locators.Alertsclass;
 import utilities.Waitutils;
 
 import java.time.Duration;
+import java.util.List;
 
 public class BasePage {
 
@@ -36,8 +39,8 @@ public class BasePage {
     public Alert switchtoalert() {
     	return driver.switchTo().alert();
     }
-    public void switchtoframe(String frameid) {
-    	driver.switchTo().frame(frameid);
+    public void switchtoframe(By locator) {
+    	driver.switchTo().frame(findelement(locator));
     }
     public String gettext(By locator) {
     	return driver.findElement(locator).getText();
@@ -56,5 +59,23 @@ public class BasePage {
     }
     public void refresh() {
     	driver.navigate().refresh();
+    }
+    public List<WebElement> findelements(By locator){
+    	return driver.findElements(locator);
+    }
+    public WebElement findelement(By locator) {
+    	return driver.findElement(locator);
+    }
+    public void mouseoperation(By locator) {
+    	Actions act=new Actions(driver);
+    	act.contextClick(findelement(locator)).perform();
+    	
+    }
+    public void draganddropaction(By locator1,By locator2) {
+    	Actions act=new Actions(driver);
+    	act.dragAndDrop(findelement(locator1),findelement(locator2)).perform();
+    }
+    public void navigateback() {
+    	driver.navigate().back();
     }
 }
