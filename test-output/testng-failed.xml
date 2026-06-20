@@ -4,31 +4,15 @@
   <parameter name="browser" value="edge"/>
   <test thread-count="4" name="ChromeTest(failed)">
     <classes>
-      <class name="Testcases.Testnglearntest">
-        <methods>
-          <include name="afterSuite"/>
-          <include name="afterMethod"/>
-          <include name="beforeTest"/>
-          <include name="teardown"/>
-          <include name="testcase5"/>
-          <include name="beforeSuite"/>
-          <include name="afterClass"/>
-          <include name="setupTest"/>
-          <include name="testcase6"/>
-          <include name="afterTest"/>
-          <include name="beforeMethod"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- Testcases.Testnglearntest -->
-      <class name="Testcases.HomepageTest">
+      <class name="Testcases.HerokuappTest">
         <methods>
           <include name="teardown"/>
           <include name="setupTest"/>
-          <include name="setup"/>
+          <include name="test_heroapp"/>
           <include name="rampdown"/>
-          <include name="test_login"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- Testcases.HomepageTest -->
+      </class> <!-- Testcases.HerokuappTest -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
