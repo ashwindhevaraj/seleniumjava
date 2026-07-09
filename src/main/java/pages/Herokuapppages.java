@@ -3,7 +3,9 @@ package pages;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
+import java.util.Set;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -47,7 +49,11 @@ public void tabledataprint() {
 }
 public void contextoperation() {
 	click(Herokuapplocators.contextmenu);
-	mouseoperation(Herokuapplocators.contextclickelement);
+	mouseoperation("contextclick",Herokuapplocators.contextclickelement);
+}
+public void mouseoveroperation() {
+	click(Herokuapplocators.hovermenu);
+	mouseoperation("mouseover",Herokuapplocators.mouseoverobject);
 }
 public void draganddrop() {
 	click(Herokuapplocators.draganddropmenu);
@@ -63,5 +69,64 @@ public void frameoperations() {
 	switchtoframe(Herokuapplocators.frametop);
 	switchtoframe(Herokuapplocators.framemiddle);
 	System.out.println(gettext(Herokuapplocators.frametext));
+}
+public void tabledataextract() {
+	click(Herokuapplocators.challengingdommenu);
+	WebElement tableheadername = findelement(Herokuapplocators.tableheadername);
+	List<WebElement> tableheaders = tableheadername.findElements(By.xpath("//th"));
+	int headerindex =0;
+	for(int i=0;i<tableheaders.size();i++) {
+		if(tableheaders.get(i).getText().equals("Amet")) {
+			headerindex=i;
+			break;
+		}
+	}
+	WebElement tabledataname1 = findelement(Herokuapplocators.tabledataname);
+	List<WebElement> tablebodydata1 = tabledataname1.findElements(By.xpath("//td["+(headerindex+1)+"]"));
+	for(int i=0;i<tablebodydata1.size();i++) {
+		if(tablebodydata1.get(i).getText().equals("Consequuntur1")) {
+			System.out.println("Table data found at row"+(i+1));
+		}
+	}
+}
+public void windowhandling() {
+	click(Herokuapplocators.windowmenu);
+	String mainwindow=getmainwindow();
+	click(Herokuapplocators.windowclickherebutton);
+	Set<String> windowhandles = windowhandles();
+	for(String window:windowhandles) {
+		if(!window.equalsIgnoreCase(mainwindow)) {
+			switchtowindow(window);
+		}
+	}
+	gettext(Herokuapplocators.childwindowlocator);
+	switchtodefault();
+	browserCommands();
+}
+public void alerthandling() {
+	Alert alert;
+	click(Herokuapplocators.alertmenu);
+	click(Herokuapplocators.alertfirstbutton);
+	alert=switchtoalert();
+	alert.accept();
+	click(Herokuapplocators.alertsecondbutton);
+	alert=switchtoalert();
+	alert.dismiss();
+	System.out.println(gettext(Herokuapplocators.resultofclick));
+	click(Herokuapplocators.alertthirdbutton);
+	alert = switchtoalert();
+	alert.sendKeys("testing purpose");
+	alert.accept();
+	System.out.println(gettext(Herokuapplocators.resultofclick));
+}
+public void selecthandling() {
+	click(Herokuapplocators.dropdownmenu);
+	selecthandle(Herokuapplocators.selectdropdown,"Option 2");
+}
+public void keyhandling() {
+	scroll(Herokuapplocators.keypressmenu);
+	click(Herokuapplocators.keypressmenu);
+	click(Herokuapplocators.keymessagearea);
+	mouseoperation("keyupdown",Herokuapplocators.mouseoverobject);
 }
 }
