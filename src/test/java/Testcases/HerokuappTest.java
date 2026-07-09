@@ -53,7 +53,13 @@ class HerokuappTest extends BaseTest {
 		//heropage.tabledataprint();
 		//heropage.contextoperation();
 		//heropage.draganddrop();
-		heropage.frameoperations();
+		//heropage.mouseoveroperation();
+		//heropage.frameoperations();
+		//heropage.tabledataextract();
+		//heropage.windowhandling();
+		//heropage.alerthandling();
+		//heropage.selecthandling();
+		heropage.keyhandling();
 		Assert.assertEquals(true, true);
 	}
 
