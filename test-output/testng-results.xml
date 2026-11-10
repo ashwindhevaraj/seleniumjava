@@ -1,40 +1,356 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="13" passed="10" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-30T21:28:36 IST" name="Suite" finished-at="2026-06-30T21:28:43 IST" duration-ms="7314">
+  <suite started-at="2026-11-10T13:02:13 IST" name="Suite" finished-at="2026-11-10T13:02:29 IST" duration-ms="15605">
     <groups>
+      <group name="firstgroup">
+        <method signature="Testnglearntest.testcase1()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" name="testcase1" class="Testcases.Testnglearntest"/>
+      </group> <!-- firstgroup -->
+      <group name="expectedexceptions">
+        <method signature="Testnglearntest.testcase5()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" name="testcase5" class="Testcases.Testnglearntest"/>
+        <method signature="Testnglearntest.testcase6()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" name="testcase6" class="Testcases.Testnglearntest"/>
+        <method signature="Testnglearntest.testcase4()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" name="testcase4" class="Testcases.Testnglearntest"/>
+        <method signature="Testnglearntest.testcase7(java.lang.String)[pri:0, instance:Testcases.Testnglearntest@63f259c3]" name="testcase7" class="Testcases.Testnglearntest"/>
+      </group> <!-- expectedexceptions -->
+      <group name="secondgroup">
+        <method signature="Testnglearntest.testcase3()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" name="testcase3" class="Testcases.Testnglearntest"/>
+      </group> <!-- secondgroup -->
+      <group name="dataprovidercheck">
+        <method signature="Testnglearntest.testcase7(java.lang.Integer,java.lang.Integer)[pri:0, instance:Testcases.Testnglearntest@63f259c3]" name="testcase7" class="Testcases.Testnglearntest"/>
+        <method signature="Testnglearntest.testcase8(Testcases.Testdatacheck)[pri:0, instance:Testcases.Testnglearntest@63f259c3]" name="testcase8" class="Testcases.Testnglearntest"/>
+      </group> <!-- dataprovidercheck -->
     </groups>
-    <test started-at="2026-06-30T21:28:36 IST" name="ChromeTest" finished-at="2026-06-30T21:28:43 IST" duration-ms="7314">
-      <class name="Testcases.HerokuappTest">
-        <test-method is-config="true" signature="setupTest(java.lang.String)[pri:0, instance:Testcases.HerokuappTest@38604b81]" started-at="2026-06-30T21:28:31 IST" name="setupTest" finished-at="2026-06-30T21:28:36 IST" duration-ms="4665" status="PASS">
+    <test started-at="2026-11-10T13:02:13 IST" name="ChromeTest" finished-at="2026-11-10T13:02:29 IST" duration-ms="15605">
+      <class name="Testcases.HomepageTest">
+        <test-method is-config="true" signature="setupTest(java.lang.String)[pri:0, instance:Testcases.HomepageTest@74bf1791]" started-at="2026-11-10T13:02:07 IST" name="setupTest" finished-at="2026-11-10T13:02:13 IST" duration-ms="6312" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[edge]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:Testcases.HerokuappTest@38604b81]" started-at="2026-06-30T21:28:36 IST" name="setup" finished-at="2026-06-30T21:28:36 IST" duration-ms="52" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Testcases.HomepageTest@74bf1791]" started-at="2026-11-10T13:02:14 IST" name="setup" finished-at="2026-11-10T13:02:14 IST" duration-ms="46" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="test_heroapp()[pri:0, instance:Testcases.HerokuappTest@38604b81]" started-at="2026-06-30T21:28:36 IST" name="test_heroapp" finished-at="2026-06-30T21:28:42 IST" duration-ms="6422" status="PASS">
+        <test-method signature="test_login()[pri:0, instance:Testcases.HomepageTest@74bf1791]" started-at="2026-11-10T13:02:14 IST" name="test_login" finished-at="2026-11-10T13:02:18 IST" duration-ms="4362" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_heroapp -->
-        <test-method is-config="true" signature="rampdown()[pri:0, instance:Testcases.HerokuappTest@38604b81]" started-at="2026-06-30T21:28:42 IST" name="rampdown" finished-at="2026-06-30T21:28:43 IST" duration-ms="591" status="PASS">
+        </test-method> <!-- test_login -->
+        <test-method signature="testlogin(java.lang.String,java.lang.String)[pri:0, instance:Testcases.HomepageTest@74bf1791]" started-at="2026-11-10T13:02:26 IST" name="testlogin" data-provider="excelread1" finished-at="2026-11-10T13:02:26 IST" duration-ms="12" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[aswin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testlogin -->
+        <test-method signature="testlogin(java.lang.String,java.lang.String)[pri:0, instance:Testcases.HomepageTest@74bf1791]" started-at="2026-11-10T13:02:26 IST" name="testlogin" data-provider="excelread1" finished-at="2026-11-10T13:02:26 IST" duration-ms="14" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[excel]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[readed]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testlogin -->
+        <test-method is-config="true" signature="rampdown()[pri:0, instance:Testcases.HomepageTest@74bf1791]" started-at="2026-11-10T13:02:26 IST" name="rampdown" finished-at="2026-11-10T13:02:29 IST" duration-ms="2358" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- rampdown -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Testcases.HerokuappTest@38604b81]" started-at="2026-06-30T21:28:43 IST" name="teardown" finished-at="2026-06-30T21:28:43 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Testcases.HomepageTest@74bf1791]" started-at="2026-11-10T13:02:29 IST" name="teardown" finished-at="2026-11-10T13:02:29 IST" depends-on-methods="Testcases.Testnglearntest.afterSuite" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- Testcases.HerokuappTest -->
+      </class> <!-- Testcases.HomepageTest -->
+      <class name="Testcases.Testnglearntest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:13 IST" name="beforeSuite" finished-at="2026-11-10T13:02:13 IST" depends-on-methods="base.BaseTest.setupTest" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:14 IST" name="beforeTest" finished-at="2026-11-10T13:02:14 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="beforeClass" finished-at="2026-11-10T13:02:26 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="beforeMethod" finished-at="2026-11-10T13:02:26 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testcase5()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="testcase5" finished-at="2026-11-10T13:02:26 IST" duration-ms="18" status="FAIL">
+          <exception class="java.lang.ArithmeticException">
+            <message>
+              <![CDATA[/ by zero]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.ArithmeticException: / by zero
+at pages.Testnglearnings.checkException(Testnglearnings.java:13)
+at Testcases.Testnglearntest.testcase5(Testnglearntest.java:81)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ArithmeticException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase5 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="afterMethod" finished-at="2026-11-10T13:02:26 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="testcase6()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="testcase6" finished-at="2026-11-10T13:02:26 IST" depends-on-methods="Testcases.Testnglearntest.testcase5" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Testcases.Testnglearntest.testcase6() on instance Testcases.Testnglearntest@63f259c3 depends on not successfully finished methods 
+[Testcases.Testnglearntest.testcase5() on instance Testcases.Testnglearntest@63f259c3]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Testcases.Testnglearntest.testcase6() on instance Testcases.Testnglearntest@63f259c3 depends on not successfully finished methods 
+[Testcases.Testnglearntest.testcase5() on instance Testcases.Testnglearntest@63f259c3]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase6 -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="beforeMethod" finished-at="2026-11-10T13:02:26 IST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testcase1()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="testcase1" finished-at="2026-11-10T13:02:26 IST" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase1 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="afterMethod" finished-at="2026-11-10T13:02:26 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="beforeMethod" finished-at="2026-11-10T13:02:26 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testcase3()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="testcase3" finished-at="2026-11-10T13:02:26 IST" duration-ms="28" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase3 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="afterMethod" finished-at="2026-11-10T13:02:26 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="beforeMethod" finished-at="2026-11-10T13:02:26 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testcase4()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="testcase4" finished-at="2026-11-10T13:02:26 IST" duration-ms="10" status="PASS">
+          <exception class="java.lang.ArithmeticException">
+            <message>
+              <![CDATA[/ by zero]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.ArithmeticException: / by zero
+at pages.Testnglearnings.checkException(Testnglearnings.java:13)
+at Testcases.Testnglearntest.testcase4(Testnglearntest.java:77)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ArithmeticException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase4 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="afterMethod" finished-at="2026-11-10T13:02:26 IST" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="beforeMethod" finished-at="2026-11-10T13:02:26 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testcase7(java.lang.Integer,java.lang.Integer)[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="testcase7" data-provider="testdata" finished-at="2026-11-10T13:02:26 IST" duration-ms="30" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase7 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="afterMethod" finished-at="2026-11-10T13:02:26 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="beforeMethod" finished-at="2026-11-10T13:02:26 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testcase7(java.lang.Integer,java.lang.Integer)[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="testcase7" data-provider="testdata" finished-at="2026-11-10T13:02:26 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase7 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="afterMethod" finished-at="2026-11-10T13:02:26 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="beforeMethod" finished-at="2026-11-10T13:02:26 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testcase7(java.lang.String)[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="testcase7" finished-at="2026-11-10T13:02:26 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase7 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="afterMethod" finished-at="2026-11-10T13:02:26 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="beforeMethod" finished-at="2026-11-10T13:02:26 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testcase8(Testcases.Testdatacheck)[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="testcase8" data-provider="testdata2" finished-at="2026-11-10T13:02:26 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Testcases.Testdatacheck@267f9765]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase8 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="afterMethod" finished-at="2026-11-10T13:02:26 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:26 IST" name="afterClass" finished-at="2026-11-10T13:02:26 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:29 IST" name="afterTest" finished-at="2026-11-10T13:02:29 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:Testcases.Testnglearntest@63f259c3]" started-at="2026-11-10T13:02:29 IST" name="afterSuite" finished-at="2026-11-10T13:02:29 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- Testcases.Testnglearntest -->
     </test> <!-- ChromeTest -->
   </suite> <!-- Suite -->
 </testng-results>

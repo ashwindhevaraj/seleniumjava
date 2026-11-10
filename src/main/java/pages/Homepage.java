@@ -10,6 +10,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
@@ -322,4 +323,16 @@ public class Homepage extends BasePage{
     	waits.until(d -> tooltiptext1.isDisplayed());
     	System.out.println(tooltiptext1.getText().toString());
     }*/
+    public void consolelogdisplay() {
+    	scroll(Elements.elementmenu);
+    	try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	elementmenuclick();
+    	//widgetmenuclick();
+    	driver.manage().logs().get(LogType.BROWSER).forEach(log->System.out.println(log));
+    }
 }
