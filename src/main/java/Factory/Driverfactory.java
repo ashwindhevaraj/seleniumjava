@@ -2,6 +2,7 @@ package Factory;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.logging.Level;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,6 +11,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -22,7 +25,11 @@ public class Driverfactory {
 
         case "chrome" : {
             WebDriverManager.chromedriver().setup();
+            // code for capturing logs
+            LoggingPreferences logs = new LoggingPreferences();
+            logs.enable(LogType.BROWSER, Level.ALL);
             ChromeOptions options = new ChromeOptions();
+            options.setCapability("goog:loggingPrefs",logs); //code ends here
             options.addArguments("--start-maximized");
             return new ChromeDriver(options);
         }

@@ -79,7 +79,7 @@ class HomepageTest extends BaseTest {
 		//navigationCommands();
 		//hmpage.radiobuttonhandling();
 		//hmpage.checkboxhandling();
-		hmpage.selecthandling();
+		//hmpage.selecthandling();
 		//hmpage.oldselecthandling();
 		//hmpage.multiselecthandling();
 		//hmpage.linktexthandling("Click Here for Valid Link");
@@ -99,6 +99,7 @@ class HomepageTest extends BaseTest {
 		//}
 		//hmpage.brokenlinkcheck();
 		//hmpage.tooltipvalidations();
+		hmpage.consolelogdisplay();
 		Assert.assertEquals(true, true);
 	}
 	@Test(dataProvider="excelread1")
